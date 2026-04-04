@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timéo Javaux | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">TJ<span>.</span></div>
+        <div class="links">
+            <a href="#projets">Projets</a>
+            <a href="https://github.com/timeojavaux" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <header data-aos="fade-up">
+        <h1>Bonjour, moi c'est <span>Timéo</span>.</h1>
+        <p>Étudiant en 3ᵉ année de BUT Informatique & futur alternant en Dev / Data.</p>
+        <div class="status-badge">🟢 Disponible pour une alternance</div>
+    </header>
+
+    <main id="projets">
+        <section class="grid">
+            <div class="card wide" data-aos="zoom-in">
+                <h3>Stage BI - CHU Dijon</h3>
+                <p>Analyse de Big Data avec SQL et SAP BusinessObjects.</p>
+                <div class="tags"><span>SQL</span><span>Big Data</span><span>BI</span><span>Reporting</span></div>
+				<span class="aura"></span>
+            </div>
+
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                <h3>App Web QCM</h3>
+                <p>Plateforme client-serveur en C# et PHP.</p>
+                <div class="tags"><span>C#</span><span>PHP</span><span>UML</span></div>
+				<span class="aura"></span>
+            </div>
+
+            <a href="https://github.com/timeojavaux" class="card github-card" data-aos="zoom-in" data-aos-delay="200">
+                <h3>Mon GitHub</h3>
+                <p>Voir tous mes repos et mes contributions.</p>
+                <span class="arrow">→</span>
+            </a>
+        </section>
+    </main>
+	
+	<footer class="fixed-footer">
+		<div class="footer-content">
+			<a href="https://linkedin.com/in/timeojavaux" target="_blank">
+				<i class="fab fa-linkedin"></i> <span>Linkedin</span>
+			</a>
+			<a href="https://github.com/timeojavaux" target="_blank">
+				<i class="fab fa-github"></i> <span>GitHub</span>
+			</a>
+			<a href="mailto:timeo.javaux@iut-dijon.u-bourgogne.fr">
+				<i class="fas fa-envelope"></i> <span>Mail</span>
+			</a>
+		</div>
+	</footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+	<script src="aura.js"></script>
+</body>
+</html>
