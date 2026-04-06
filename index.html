@@ -7,7 +7,7 @@
     <title>Timéo Javaux | Portfolio</title>
 
     <!-- Style -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 
     <!-- Font import -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
     <nav class="navbar">
         <div class="logo">TJ<span>.</span></div>
         <ul class="nav-links">
-            <li><a href="#home" class="active">À propos</a></li>
+            <li><a href="#home" class="active">Accueil</a></li>
             <li><a href="#projects">Projets</a></li>
             <li><a href="#experience">Expérience</a></li>
             <li><a href="#education">Formations</a></li>
@@ -40,25 +40,27 @@
     <header id="home" data-aos="fade-up">
         <h1>Bonjour, moi c'est <span>Timéo</span>.</h1>
         <p>Étudiant en 2ᵉ année de BUT Informatique & futur alternant, attiré par le Dev / la Data.</p>
-        <div class="status-badge">🟢 En recherche d'une alternance</div>
+        <p>Ce portfolio présente mes expériences, mes projets ainsi que mes compétences en informatique.</p>
+        <div class="status-badge">🟢 En recherche d'une alternance <i>(dès septembre 2026)</i></div>
     </header>
 
     <!-- Projects section -->
     <main id="projects">
+        <h2><span class="arrow-section">></span> Projets</h2>
         <section class="grid">
             <div class="card wide" data-aos="zoom-in">
-                <h3>Stage BI - CHU Dijon</h3>
-                <p>Analyse de Big Data avec SQL et SAP BusinessObjects.</p>
-                <div class="tags"><span>SQL</span><span>Big Data</span><span>BI</span><span>Reporting</span></div>
+                <h3>Développement d’une application web</h3>
+                <p>Développement en équipe d’une application client-serveur pour de futurs étudiants en BUT Informatique : incluant QCM, exercices et cours interactifs avec comptes étudiants et enseignants, intégrant UML, PHP/HTML/CSS côté client, GitHub, base de données SQL et respect des normes d’accessibilité.</p>
+                <div class="tags"><span>PHP</span><span>SQL</span><span>GitHub</span><span>Équipe</span></div>
             </div>
 
-            <div class="card" data-aos="zoom-in" data-aos-delay="100">
-                <h3>App Web QCM</h3>
-                <p>Plateforme client-serveur en full PHP.</p>
-                <div class="tags"><span>Base de données</span><span>PHP</span><span>UML</span></div>
+            <div class="card wide" data-aos="zoom-in" data-aos-delay="100">
+                <h3>Développement d’une application complète</h3>
+                <p>Développement en équipe d’un jeu rétro 2D en C# à partir d’un framework et d’un cahier des charges précis, avec conception UML, programmation orientée objet, gestion de versions GitHub, tests unitaires et internationalisation.</p>
+                <div class="tags"><span>C#</span><span>Framework</span><span>GitHub</span><span>Équipe</span></div>
             </div>
 
-            <a href="https://github.com/timeojavaux" class="card github-card" data-aos="zoom-in" data-aos-delay="200">
+            <a href="https://github.com/timeojavaux" class="card github-card" data-aos="zoom-in" data-aos-delay="200" target="_blank">
                 <h3>Mon GitHub</h3>
                 <p>Voir tous mes repos et mes contributions.</p>
                 <span class="arrow">→</span>
@@ -68,17 +70,70 @@
 
     <!-- Experiences section -->
     <section id="experience"> 
+        <h2><span class="arrow-section">></span> Expériences</h2>
+        <div class="exp-item" data-aos="fade-left">
+            <div class="edu-header">
+                <div class="edu-title">
+                    <h3>STAGIAIRE BUSINESS INTELLIGENCE</h3>
+                    <span>CHU DE DIJON BOURGOGNE - DIJON (21)</span>
+                </div>
+                <div class="edu-date">Janvier 2026 - Mars 2026</div>
+            </div>
+            <ul>
+                <li>Recueil de besoins des utilisateurs.</li>
+                <li>Analyse de données hospitalières via SQL.</li>
+                <li>Mise à disposition de rapports d'aide à la prise de décision.</li>
+                <li>Création de tableaux de bord avec SAP BusinessObjects.</li>
+            </ul>
+        </div>
+
+        <div class="exp-item" data-aos="fade-left" data-aos-delay="100">
+            <div class="edu-header">
+                <div class="edu-title">
+                    <h3>CONSEILLER DE VENTE</h3>
+                    <span>L'ENTREPÔT DU BRICOLAGE - DOUBS (25)</span>
+                </div>
+                <div class="edu-date">Juillet 2025 - Août 2025</div>
+            </div>
+            <ul>
+                <li>Analyse de données hospitalières via SQL.</li>
+                <li>Création de tableaux de bord avec SAP BusinessObjects.</li>
+            </ul>
+        </div>
     </section>
 
     <!-- Education section -->
     <section id="education"> 
+        <h2><span class="arrow-section">></span> Formations</h2>
+    
+        <div class="education-item" data-aos="fade-left">
+            <div class="edu-header">
+                <div class="edu-title">
+                    <h3>BUT INFORMATIQUE</h3>
+                    <span>IUT DIJON-AUXERRE - DIJON (21)</span>
+                </div>
+                <div class="edu-date">Septembre 2024 - Aujourd'hui</div>
+            </div>
+            <p>Spécialisation Réalisation d'applications & Data. Actuellement en 2ème année.</p>
+        </div>
+
+        <div class="education-item" data-aos="fade-left" data-aos-delay="100">
+            <div class="edu-header">
+                <div class="edu-title">
+                    <h3>BACCALAURÉAT GÉNÉRAL</h3>
+                    <span>LYCÉE XAVIER MARMIER - PONTARLIER (25)</span>
+                </div>
+                <div class="edu-date">Septembre 2021 - Juin 2024</div>
+            </div>
+            <p>Spécialités Mathématiques et NSI (Numérique et Sciences Informatiques). Mention bien obtenue.</p>
+        </div>
     </section>
 
     <!-- Skills section -->
     <section id="skills" class="skills-section">
-    <h2>Compétences</h2>
+        <h2><span class="arrow-section">></span> Compétences</h2>
 
-        <div class="skill-category">
+        <div class="skill-category" data-aos="fade-up">
             <h3>Développement & Langages</h3>
             <ul class="skills-grid">
                 <li data-label="C#"><i class="devicon-csharp-plain"></i></li>
@@ -95,7 +150,7 @@
             </ul>
         </div>
 
-        <div class="skill-category">
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
             <h3>Data & Frameworks</h3>
             <ul class="skills-grid">
                 <li data-label="Oracle SQL"><i class="devicon-oracle-original"></i></li>
@@ -109,7 +164,7 @@
             </ul>
         </div>
 
-        <div class="skill-category">
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
             <h3>Outils & Environnement</h3>
             <ul class="skills-grid">
                 <li data-label="Github"><i class="devicon-github-plain"></i></li>
@@ -123,13 +178,15 @@
                 <li data-label="vSphere"><i class="devicon-vsphere-plain"></i></li>
                 <li data-label="IntelliJ"><i class="devicon-intellij-plain"></i></li>
                 <li data-label="Arduino"><i class="devicon-arduino-plain"></i></li>
+                <li data-label="Trello"><i class="devicon-trello-plain"></i></li>
+                <li data-label="Canva"><i class="devicon-canva-plain"></i></li>
             </ul>
         </div>
     </section>
 
     <!-- Interests section -->
     <section id="interests"> 
-        ... 
+        <h2><span class="arrow-section">></span> Centres d'intérêts</h2>
     </section>
 	
     <!-- Footer -->
