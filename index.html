@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html lang="fr">
+<!-- Head -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timéo Javaux | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
-<body>
 
-    <nav>
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font import -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap" rel="stylesheet">
+
+    <!-- Smooth load animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"rel="stylesheet" type='text/css'/>
+</head>
+
+
+<!-- Body -->
+<body>
+    <!-- Top navigation bar -->
+    <nav class="navbar">
         <div class="logo">TJ<span>.</span></div>
-        <div class="links">
-            <a href="#projets">Projets</a>
-            <a href="https://github.com/timeojavaux" target="_blank">GitHub</a>
-        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">À propos</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#experience">Expérience</a></li>
+            <li><a href="#education">Formations</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#interests">Intérêts</a></li>
+        </ul>
     </nav>
 
-    <header data-aos="fade-up">
+    <!-- Center presentation block -->
+    <header id="home" data-aos="fade-up">
         <h1>Bonjour, moi c'est <span>Timéo</span>.</h1>
-        <p>Étudiant en 3ᵉ année de BUT Informatique & futur alternant en Dev / Data.</p>
-        <div class="status-badge">🟢 Disponible pour une alternance</div>
+        <p>Étudiant en 2ᵉ année de BUT Informatique & futur alternant, attiré par le Dev / la Data.</p>
+        <div class="status-badge">🟢 En recherche d'une alternance</div>
     </header>
 
-    <main id="projets">
+    <!-- Projects section -->
+    <main id="projects">
         <section class="grid">
             <div class="card wide" data-aos="zoom-in">
                 <h3>Stage BI - CHU Dijon</h3>
                 <p>Analyse de Big Data avec SQL et SAP BusinessObjects.</p>
                 <div class="tags"><span>SQL</span><span>Big Data</span><span>BI</span><span>Reporting</span></div>
-				<span class="aura"></span>
             </div>
 
             <div class="card" data-aos="zoom-in" data-aos-delay="100">
                 <h3>App Web QCM</h3>
-                <p>Plateforme client-serveur en C# et PHP.</p>
-                <div class="tags"><span>C#</span><span>PHP</span><span>UML</span></div>
-				<span class="aura"></span>
+                <p>Plateforme client-serveur en full PHP.</p>
+                <div class="tags"><span>Base de données</span><span>PHP</span><span>UML</span></div>
             </div>
 
             <a href="https://github.com/timeojavaux" class="card github-card" data-aos="zoom-in" data-aos-delay="200">
@@ -48,7 +65,74 @@
             </a>
         </section>
     </main>
+
+    <!-- Experiences section -->
+    <section id="experience"> 
+    </section>
+
+    <!-- Education section -->
+    <section id="education"> 
+    </section>
+
+    <!-- Skills section -->
+    <section id="skills" class="skills-section">
+    <h2>Compétences</h2>
+
+        <div class="skill-category">
+            <h3>Développement & Langages</h3>
+            <ul class="skills-grid">
+                <li data-label="C#"><i class="devicon-csharp-plain"></i></li>
+                <li data-label="C++"><i class="devicon-cplusplus-plain"></i></li>
+                <li data-label="C"><i class="devicon-c-plain"></i></li>
+                <li data-label="HTML5"><i class="devicon-html5-plain"></i></li>
+                <li data-label="CSS3"><i class="devicon-css3-plain"></i></li>
+                <li data-label="PHP"><i class="devicon-php-plain"></i></li>
+                <li data-label="TypeScript"><i class="devicon-typescript-plain"></i></li>
+                <li data-label="JavaScript"><i class="devicon-javascript-plain"></i></li>
+                <li data-label="Python"><i class="devicon-python-plain"></i></li>
+                <li data-label="Prolog"><i class="devicon-prolog-plain"></i></li>
+                <li data-label="Java"><i class="devicon-java-plain"></i></li>
+            </ul>
+        </div>
+
+        <div class="skill-category">
+            <h3>Data & Frameworks</h3>
+            <ul class="skills-grid">
+                <li data-label="Oracle SQL"><i class="devicon-oracle-original"></i></li>
+                <li data-label="MySQL"><i class="devicon-mysql-plain"></i></li>
+                <li data-label="SQL Developer"><i class="devicon-sqldeveloper-plain"></i></li>
+                <li data-label=".NET"><i class="devicon-dotnetcore-plain"></i></li>
+                <li data-label="Apache"><i class="devicon-apache-plain"></i></li>
+                <li data-label="WordPress"><i class="devicon-wordpress-plain"></i></li>
+                <li data-label="RStudio"><i class="devicon-rstudio-plain"></i></li>
+                <li data-label="Hibernate"><i class="devicon-hibernate-plain"></i></li>
+            </ul>
+        </div>
+
+        <div class="skill-category">
+            <h3>Outils & Environnement</h3>
+            <ul class="skills-grid">
+                <li data-label="Github"><i class="devicon-github-plain"></i></li>
+                <li data-label="Git"><i class="devicon-git-plain"></i></li>
+                <li data-label="Visual Studio 2022"><i class="devicon-visualstudio-plain"></i></li>
+                <li data-label="Visual Studio Code"><i class="devicon-vscode-plain"></i></li>
+                <li data-label="Spyder"><i class="devicon-spyder-plain"></i></li>
+                <li data-label="Filezilla"><i class="devicon-filezilla-plain"></i></li>
+                <li data-label="Bash"><i class="devicon-bash-plain"></i></li>
+                <li data-label="Docker"><i class="devicon-docker-plain"></i></li>
+                <li data-label="vSphere"><i class="devicon-vsphere-plain"></i></li>
+                <li data-label="IntelliJ"><i class="devicon-intellij-plain"></i></li>
+                <li data-label="Arduino"><i class="devicon-arduino-plain"></i></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Interests section -->
+    <section id="interests"> 
+        ... 
+    </section>
 	
+    <!-- Footer -->
 	<footer class="fixed-footer">
 		<div class="footer-content">
 			<a href="https://linkedin.com/in/timeojavaux" target="_blank">
@@ -63,8 +147,10 @@
 		</div>
 	</footer>
 
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init({ duration: 1000, once: true });</script>
-	<script src="aura.js"></script>
+	<script src="js/aura.js"></script>
+    <script src="js/nav_select.js"></script>
 </body>
 </html>
