@@ -283,7 +283,9 @@ h2 {
 }
 
 .github-card { 
-    background: linear-gradient(135deg, #1e1e2e, #0a0a0c); 
+    background: linear-gradient(135deg, #1e1e2e, #0a0a0c);
+    text-decoration: none; 
+    color: var(--accent);
 }
 
 .fixed-footer {
