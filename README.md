@@ -1,5 +1,5 @@
 # 🌌 Personal Portfolio
-`#66BD04`*Still under development*
+🟠 *Still under development*
 
 This is my personal portfolio website, designed to showcase my technical skills, academic background, and professional experiences in software development and data analysis.
 
