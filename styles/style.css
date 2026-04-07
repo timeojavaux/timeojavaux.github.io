@@ -12,7 +12,6 @@ html {
 
 * { 
     margin: 0; 
-    
     padding: 0; box-sizing: border-box; 
 }
 
@@ -23,7 +22,6 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     min-height: 100vh;
-    margin-top: 10%;
 }
 
 body::before {
@@ -101,7 +99,7 @@ nav {
 
 header {
     text-align: center; 
-    padding: 10vh 10%;
+    padding: 30vh 10%;
 }
 
 header h1 { 
