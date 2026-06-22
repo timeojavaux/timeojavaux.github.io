@@ -9,11 +9,11 @@ This is my personal portfolio website, designed to showcase my technical skills,
 
 ## To do list:
 - [x] **Projects section:** this website, personnal projects and school projects
-- [ ] **Screenshots of the projects** when click on a project card.
 - [x] **Experiences section:** jobs, internship.
 - [x] **Education section:** academic background.
 - [x] **Skills section:** languages, tools...
-- [ ] **Interests section**.
+- [X] **Interests section**.
+- [ ] **Screenshots of the projects** when click on a project card.
 - [ ] Adding **English translations** for international reach.
 - [ ] **Phone accessible**.
 
