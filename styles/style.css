@@ -112,6 +112,21 @@ header h1 span {
     color: var(--accent); 
 }
 
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    gap: 15px;
+}
+
+.project-date {
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
 .status-badge {
     display: inline-block; 
     background: rgba(34, 197, 94, 0.1);
@@ -263,6 +278,32 @@ h2 {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
+}
+
+.skill-subcategory {
+    margin-bottom: 1.5rem;
+    padding-left: 2.6rem;
+}
+
+.skill-subcategory h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.7;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+.skill-subcategory h4::before {
+    content: "↳";
+    position: absolute;
+    left: -15px;
+    color: var(--accent);
+}
+
+.skill-subcategory .skills-grid {
+    margin-left: 0;
+    margin-bottom: 1rem;
 }
 
 .wide { 

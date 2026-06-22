@@ -1,9 +1,9 @@
 # 🌌 Personal Portfolio
 🟠 *Still under development*
 
-This is my personal portfolio website, designed to showcase my technical skills, academic background, and professional experiences in software development and data analysis.
+This is my personal portfolio website, designed to showcase my technical skills, academic background, and professional experiences in software development.
 
-**Built with:** HTML5, CSS3 (Modern Glassmorphism), and JavaScript.
+**Built with:** HTML5, CSS3, and JavaScript.
 
 ---
 
