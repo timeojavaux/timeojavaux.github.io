@@ -13,6 +13,7 @@ This is my personal portfolio website, designed to showcase my technical skills,
 - [x] **Education section:** academic background.
 - [x] **Skills section:** languages, tools...
 - [X] **Interests section**.
+- [ ] **Soft skills section**.
 - [ ] **Screenshots of the projects** when click on a project card.
 - [ ] Adding **English translations** for international reach.
 - [ ] **Phone accessible**.
