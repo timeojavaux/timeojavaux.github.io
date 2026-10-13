@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Timéo Javaux · Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Timéo Javaux, third-year computer science student (BUT Informatique) in Dijon, France, looking for a 13 to 16-week internship starting March 2027."
+    />
+
+    <link rel="icon" href="../img/logo.png" type="image/png" />
+    <link rel="alternate" hreflang="fr" href="https://timeojavaux.github.io/" />
+    <link rel="alternate" hreflang="en" href="https://timeojavaux.github.io/en/" />
+
+    <meta property="og:title" content="Timéo Javaux · Portfolio" />
+    <meta property="og:description" content="Computer science student looking for an internship in 2027." />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=Pixelify+Sans:wght@400;600&display=swap"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+
+    <script src="../js/main.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="#top">timeo.javaux</a>
+
+        <nav aria-label="Main navigation">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">menu</button>
+          <ul class="nav-list" id="nav-list">
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projets">Projects</a></li>
+            <li><a href="#competences">Skills</a></li>
+            <li><a href="#formation">Education</a></li>
+            <li><a class="nav-contact" href="#contact">Contact</a></li>
+            <li>
+              <a href="../CV_Stage_Tim%C3%A9o_Javaux.pdf" target="_blank" rel="noopener">CV ↓</a>
+            </li>
+            <li>
+              <a class="nav-lang" href="../" hreflang="fr" lang="fr">FR</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Accueil -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <canvas class="hero__sky" aria-hidden="true"></canvas>
+        <div class="container">
+          <p class="hero__status">
+            <span class="status-dot" aria-hidden="true"></span>Looking for an internship<br />
+            13 to 16 weeks · <span>15.03 → 02.07.2027</span>
+          </p>
+          <h1 class="hero__title" id="hero-title">Timéo<br />Javaux</h1>
+        </div>
+      </section>
+
+      <section class="intro" aria-label="About">
+        <div class="container">
+          <div>
+            <p class="intro__lead">
+              Third and final-year computer science student (BUT Informatique), drawn to software development, data, IT
+              support and electronics.
+            </p>
+            <div class="intro__actions">
+              <a class="button button--accent" href="../CV_Stage_Tim%C3%A9o_Javaux.pdf" target="_blank" rel="noopener"
+                >Download my resume</a
+              >
+              <a class="button" href="#contact">Contact me</a>
+            </div>
+          </div>
+
+          <dl class="facts">
+            <div>
+              <dt>degree</dt>
+              <dd>BUT Informatique · 3rd year</dd>
+            </div>
+            <div>
+              <dt>track</dt>
+              <dd>A · Application development</dd>
+            </div>
+            <div>
+              <dt>school</dt>
+              <dd>IUT Dijon-Auxerre</dd>
+            </div>
+            <div>
+              <dt>internship</dt>
+              <dd>13 to 16 weeks, March 15 to July 2, 2027</dd>
+            </div>
+            <div>
+              <dt>languages</dt>
+              <dd>English bilingual · Spanish intermediate</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- What I'm looking for -->
+      <section class="section" id="recherche" aria-labelledby="recherche-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">01</span>
+            <h2 class="section__title" id="recherche-title">What I'm looking for</h2>
+          </header>
+
+          <dl class="wanted">
+            <div>
+              <dt>type</dt>
+              <dd>End-of-studies internship, BUT Informatique (3rd year)</dd>
+            </div>
+            <div>
+              <dt>period</dt>
+              <dd>13 to 16 weeks, between March 15 and July 2, 2027</dd>
+            </div>
+            <div>
+              <dt>location</dt>
+              <dd class="placeholder">Dijon / Pontarlier, France</dd>
+            </div>
+            <div class="wanted__wide">
+              <dt>fields</dt>
+              <dd>Application development (web, software) · Data / Business Intelligence · IT support</dd>
+            </div>
+            <div>
+              <dt>driving licence</dt>
+              <dd class="placeholder">Category B driving licence, no vehicle</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">02</span>
+            <h2 class="section__title" id="experience-title">Experience</h2>
+          </header>
+
+          <ol class="timeline">
+            <li>
+              <div class="timeline__meta">
+                <time>Jan. 2026 – Mar. 2026</time>
+                Dijon, France
+              </div>
+              <div>
+                <h3>Business Intelligence Intern</h3>
+                <p class="timeline__org">CHU Dijon Bourgogne (University Hospital)</p>
+                <ul>
+                  <li>Gathered user requirements.</li>
+                  <li>Analysed hospital data (Big Data) with SQL.</li>
+                  <li>Delivered reports to support decision-making.</li>
+                  <li>Built dashboards with SAP BusinessObjects.</li>
+                  <li>Handled day-to-day user requests.</li>
+                  <li>Supported and trained users on the reporting tools.</li>
+                  <li>Managed access rights and took part in application permission reviews.</li>
+                </ul>
+                <ul class="tags">
+                  <li class="tag">Internship</li>
+                  <li class="tag">Data</li>
+                  <li class="tag">Healthcare</li>
+                  <li class="tag">SAP BusinessObjects</li>
+                  <li class="tag">Business Intelligence</li>
+                  <li class="tag">Requirements gathering</li>
+                </ul>
+                <button class="more" type="button" data-detail="chu">Learn more →</button>
+              </div>
+            </li>
+
+            <li>
+              <div class="timeline__meta">
+                <time>Jul. – Aug. 2025 and 2026</time>
+                Doubs, France
+              </div>
+              <div>
+                <h3>Sales Advisor</h3>
+                <p class="timeline__org">L'Entrepôt du Bricolage (DIY retail)</p>
+                <ul>
+                  <li>Plumbing, tiling, lighting and paint departments.</li>
+                  <li>Welcomed customers and identified their technical needs.</li>
+                  <li>Gave tailored advice and pointed customers to the right solutions.</li>
+                  <li>Managed stock and department logistics.</li>
+                  <li>Built strong interpersonal skills.</li>
+                  <li>Learned on the job every day, independently.</li>
+                </ul>
+                <ul class="tags">
+                  <li class="tag">Seasonal</li>
+                  <li class="tag">Sales advisor</li>
+                  <li class="tag">Requirements gathering</li>
+                  <li class="tag">Versatility</li>
+                  <li class="tag">Autonomy</li>
+                  <li class="tag">Interpersonal skills</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="section" id="projets" aria-labelledby="projets-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">03</span>
+            <h2 class="section__title" id="projets-title">Projects</h2>
+          </header>
+          <p class="section__note">Hover over or click a project image to see its screenshots.</p>
+
+          <!-- Screenshots -->
+          <div class="projects">
+            <article class="project">
+              <button class="project__media" type="button" data-project="antre2verres" data-seed="1"></button>
+              <div class="project__body">
+                <span class="project__date">Since Sept. 2026</span>
+                <h3>Antre2Verres (client/server)</h3>
+                <p>
+                  After winning the call for tenders, our team is building a client/server web platform in 3 sprints to
+                  digitally transform a bar-restaurant in Dijon.
+                </p>
+                <ul class="tags">
+                  <li class="tag">Client</li>
+                  <li class="tag">Development</li>
+                  <li class="tag">Server</li>
+                  <li class="tag">API</li>
+                  <li class="tag">ASP.NET</li>
+                  <li class="tag">Angular</li>
+                  <li class="tag">MariaDB</li>
+                  <li class="tag">Scrum</li>
+                </ul>
+                <div class="project__actions">
+                  <button class="more" type="button" data-detail="antre2verres">Learn more →</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <button class="project__media" type="button" data-project="audit-softs" data-seed="2"></button>
+              <div class="project__body">
+                <span class="project__date">Semester 4 · 2026</span>
+                <h3>Web application audit and optimisation</h3>
+                <p>
+                  Full audit and optimisation of an institutional application (SOFTS) for the IUT's computer science
+                  department: software quality, infrastructure security and eco-design.
+                </p>
+                <ul class="tags">
+                  <li class="tag">Audit</li>
+                  <li class="tag">Optimisation</li>
+                  <li class="tag">Quality</li>
+                  <li class="tag">Security</li>
+                  <li class="tag">Accessibility</li>
+                  <li class="tag">TypeScript</li>
+                  <li class="tag">PHP</li>
+                </ul>
+                <div class="project__actions">
+                  <button class="more" type="button" data-detail="audit-softs">Learn more →</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <button class="project__media" type="button" data-project="de-but" data-seed="3"></button>
+              <div class="project__body">
+                <span class="project__date">Semester 3 · 2025</span>
+                <h3>DE-BUT</h3>
+                <p>
+                  Client/server application for future computer science students: quizzes, exercises and interactive
+                  lessons, with student and teacher accounts. UML, PHP/HTML/CSS on the client side, SQL database, GitHub
+                  and accessibility standards.
+                </p>
+                <ul class="tags">
+                  <li class="tag">PHP</li>
+                  <li class="tag">SQL</li>
+                  <li class="tag">GitHub</li>
+                  <li class="tag">Teamwork</li>
+                </ul>
+                <div class="project__actions">
+                  <button class="more" type="button" data-detail="de-but">Learn more →</button>
+                  <a class="more more--ghost" href="https://github.com/timeojavaux/SAE-Website-DEBUT" target="_blank" rel="noopener">Code ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <button class="project__media" type="button" data-project="ratatouille" data-seed="4"></button>
+              <div class="project__body">
+                <span class="project__date">Semester 2 · 2025</span>
+                <h3>“Ratatouille” 2D game</h3>
+                <p>
+                  Retro 2D game in C#, built as a team from a framework and a detailed specification: UML design,
+                  object-oriented programming, GitHub, unit tests and internationalisation.
+                </p>
+                <ul class="tags">
+                  <li class="tag">C#</li>
+                  <li class="tag">Framework</li>
+                  <li class="tag">GitHub</li>
+                  <li class="tag">Teamwork</li>
+                </ul>
+                <div class="project__actions">
+                  <button class="more" type="button" data-detail="ratatouille">Learn more →</button>
+                  <a class="more more--ghost" href="https://github.com/timeojavaux/SAE-Game-Ratatouille" target="_blank" rel="noopener">Code ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project__media" data-seed="5" aria-hidden="true"></div>
+              <div class="project__body">
+                <span class="project__date">Since 2026</span>
+                <h3>This portfolio</h3>
+                <p>
+                  Static website designed and built on my own to present my background beyond a resume. Continuously
+                  improved: accessibility, responsive design, English version.
+                </p>
+                <ul class="tags">
+                  <li class="tag">Portfolio</li>
+                  <li class="tag">HTML</li>
+                  <li class="tag">CSS</li>
+                  <li class="tag">JavaScript</li>
+                  <li class="tag">GitHub</li>
+                </ul>
+                <div class="project__actions">
+                  <button class="more" type="button" data-detail="portfolio">Learn more →</button>
+                  <a class="more more--ghost" href="https://github.com/timeojavaux/timeojavaux.github.io" target="_blank" rel="noopener">Code ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <a class="project project--link" href="https://github.com/timeojavaux" target="_blank" rel="noopener">
+              <h3>GitHub</h3>
+              <p>All my repositories and contributions.</p>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section" id="competences" aria-labelledby="competences-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">04</span>
+            <h2 class="section__title" id="competences-title">Skills</h2>
+          </header>
+
+          <div class="skills">
+            <div class="skills__main">
+              <h3>Main stack</h3>
+              <ul class="tags">
+              <li class="tag tag--main">C#</li>
+              <li class="tag tag--main">PHP</li>
+              <li class="tag tag--main">Angular</li>
+              <li class="tag tag--main">HTML / CSS</li>
+              <li class="tag tag--main">JavaScript</li>
+              <li class="tag tag--main">TypeScript</li>
+              <li class="tag tag--main">Java</li>
+              <li class="tag tag--main">SQL</li>
+              </ul>
+            </div>
+            <p class="skills__label">Other skills</p>
+            <div class="skills__group">
+              <h3>Development &amp; languages</h3>
+              <div class="skills__row">
+                <h4>Web</h4>
+                <ul class="tags">
+                  <li class="tag">WordPress</li>
+                </ul>
+              </div>
+              <div class="skills__row">
+                <h4>Applications</h4>
+                <ul class="tags">
+                  <li class="tag">C++</li>
+                  <li class="tag">C</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="skills__group">
+              <h3>Data &amp; frameworks</h3>
+              <div class="skills__row">
+                <h4>Databases &amp; logic</h4>
+                <ul class="tags">
+                  <li class="tag">Oracle SQL</li>
+                  <li class="tag">MySQL</li>
+                  <li class="tag">MariaDB</li>
+                  <li class="tag">SQL Developer</li>
+                  <li class="tag">DBeaver</li>
+                  <li class="tag">Neo4J</li>
+                  <li class="tag">Prolog</li>
+                  <li class="tag">Hibernate</li>
+                </ul>
+              </div>
+              <div class="skills__row">
+                <h4>Web frameworks &amp; libraries</h4>
+                <ul class="tags">
+                  <li class="tag">.NET</li>
+                  <li class="tag">AngularJS</li>
+                  <li class="tag">jQuery</li>
+                  <li class="tag">Three.js</li>
+                  <li class="tag">NestJS</li>
+                  <li class="tag">Express</li>
+                </ul>
+              </div>
+              <div class="skills__row">
+                <h4>Data science &amp; analysis</h4>
+                <ul class="tags">
+                  <li class="tag">Python</li>
+                  <li class="tag">RStudio</li>
+                  <li class="tag">Pandas</li>
+                  <li class="tag">NumPy</li>
+                  <li class="tag">Matplotlib</li>
+                  <li class="tag">Scikit-learn</li>
+                </ul>
+              </div>
+              <div class="skills__row">
+                <h4>Servers &amp; package managers</h4>
+                <ul class="tags">
+                  <li class="tag">Apache</li>
+                  <li class="tag">Debian</li>
+                  <li class="tag">Composer</li>
+                  <li class="tag">Jest</li>
+                  <li class="tag">Postman</li>
+                  <li class="tag">Swagger</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="skills__group">
+              <h3>Tools &amp; environment</h3>
+              <div class="skills__row">
+                <h4>Version control &amp; dev</h4>
+                <ul class="tags">
+                  <li class="tag">UML</li>
+                  <li class="tag">Git</li>
+                  <li class="tag">GitHub</li>
+                  <li class="tag">Bash</li>
+                  <li class="tag">Docker</li>
+                  <li class="tag">vSphere</li>
+                </ul>
+              </div>
+              <div class="skills__row">
+                <h4>IDEs &amp; editors</h4>
+                <ul class="tags">
+                  <li class="tag">Visual Studio Code</li>
+                  <li class="tag">Visual Studio 2022</li>
+                  <li class="tag">IntelliJ</li>
+                  <li class="tag">Android Studio</li>
+                  <li class="tag">Spyder</li>
+                  <li class="tag">Arduino</li>
+                  <li class="tag">FileZilla</li>
+                </ul>
+              </div>
+              <div class="skills__row">
+                <h4>Organisation &amp; design</h4>
+                <ul class="tags">
+                  <li class="tag">Trello</li>
+                  <li class="tag">Canva</li>
+                </ul>
+              </div>
+            </div>
+            <div class="skills__group">
+              <h3>Languages</h3>
+              <div class="skills__row">
+                <h4>English</h4>
+                <ul class="tags">
+                  <li class="tag">Bilingual</li>
+                </ul>
+              </div>
+              <div class="skills__row">
+                <h4>Spanish</h4>
+                <ul class="tags">
+                  <li class="tag">Good understanding · speaking still improving</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Soft skills -->
+      <section class="section" id="savoir-etre" aria-labelledby="savoir-etre-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">05</span>
+            <h2 class="section__title" id="savoir-etre-title">Soft skills</h2>
+          </header>
+
+          <ul class="cards">
+            <li>
+              <h3>Requirements gathering</h3>
+              <p>With hospital users and store customers alike: listen, rephrase, suggest the right solution.</p>
+            </li>
+            <li>
+              <h3>Teaching</h3>
+              <p>Supported and trained users to get started with reporting tools.</p>
+            </li>
+            <li>
+              <h3>Teamwork</h3>
+              <p>Team projects run in Scrum sprints, versioned with Git and GitHub.</p>
+            </li>
+            <li>
+              <h3>Autonomy</h3>
+              <p>On-the-job learning and solo personal projects, like this portfolio.</p>
+            </li>
+            <li>
+              <h3>Versatility</h3>
+              <p>From development to data and support, and four different store departments.</p>
+            </li>
+            <li>
+              <h3>Interpersonal skills</h3>
+              <p>Built through daily contact with customers and teams.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="section" id="formation" aria-labelledby="formation-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">06</span>
+            <h2 class="section__title" id="formation-title">Education</h2>
+          </header>
+
+          <ol class="timeline">
+            <li>
+              <div class="timeline__meta">
+                <time>Sept. 2024 – Present</time>
+                Dijon, France
+              </div>
+              <div>
+                <h3>BUT Informatique (Bachelor in Computer Science)</h3>
+                <p class="timeline__org">IUT Dijon-Auxerre</p>
+                <p>Track A: application development (design, development, validation).</p>
+                <p>Currently in 3rd year.</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline__meta">
+                <time>Sept. 2021 – June 2024</time>
+                Pontarlier, France
+              </div>
+              <div>
+                <h3>French Baccalaureate (general)</h3>
+                <p class="timeline__org">Lycée Xavier Marmier (high school)</p>
+                <p>Majors in Mathematics and Computer Science (NSI).</p>
+                <p>Graduated with honours (mention bien).</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section class="section" id="certifications" aria-labelledby="certifications-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">07</span>
+            <h2 class="section__title" id="certifications-title">Certifications</h2>
+          </header>
+
+          <!-- To add a certification: duplicate an <li>. -->
+          <ol class="timeline">
+            <li>
+              <div class="timeline__meta">
+                <strong>freeCodeCamp</strong>
+              </div>
+              <div>
+                <h3>Foundational C#</h3>
+                <p>Online certification covering the fundamentals of the C# language.</p>
+                <ul class="tags">
+                  <li class="tag">C#</li>
+                  <li class="tag">Certification</li>
+                </ul>
+                <a class="more more--ghost" href="https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/" target="_blank" rel="noopener">View the course ↗</a>
+              </div>
+            </li>
+            <li>
+              <div class="timeline__meta">
+                <strong>MOOC</strong>
+              </div>
+              <div>
+                <h3>What is OSINT?</h3>
+                <p>Introduction to Open Source Intelligence.</p>
+                <ul class="tags">
+                  <li class="tag">OSINT</li>
+                  <li class="tag">Cybersecurity</li>
+                </ul>
+                <a class="more more--ghost" href="https://mooc.osintfr.com/" target="_blank" rel="noopener">View the course ↗</a>
+              </div>
+            </li>
+            <li>
+              <div class="timeline__meta">
+                <strong>OpenClassrooms</strong>
+              </div>
+              <div>
+                <h3>Cybersecurity fundamentals</h3>
+                <p>Online course on the basics of information security.</p>
+                <ul class="tags">
+                  <li class="tag">Cybersecurity</li>
+                  <li class="tag">Online course</li>
+                </ul>
+                <a class="more more--ghost" href="https://openclassrooms.com/fr/courses/8028761-decouvrez-l-univers-de-la-cybersecurite" target="_blank" rel="noopener">View the course ↗</a>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Interests -->
+      <section class="section" id="interets" aria-labelledby="interets-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">08</span>
+            <h2 class="section__title" id="interets-title">Interests</h2>
+          </header>
+
+          <ul class="interests">
+            <li>Music &amp; festivals</li>
+            <li>Films &amp; TV series</li>
+            <li>Nature</li>
+            <li>Architecture</li>
+            <li>Interior &amp; design</li>
+            <li>DIY</li>
+            <li>Travel</li>
+            <li>Video games</li>
+            <li>Tech watch</li>
+            <li>Robotics &amp; electronics</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">09</span>
+            <h2 class="section__title" id="contact-title">Contact</h2>
+          </header>
+
+          <p class="contact__lead">
+            Have a 13 to 16-week internship between March 15 and July 2, 2027? Email me or find me on LinkedIn.
+          </p>
+          <ul class="contact__links">
+            <li>
+              <a class="button" href="mailto:timeo.javaux@iut-dijon.u-bourgogne.fr">Email</a>
+            </li>
+            <li>
+              <a class="button" href="https://linkedin.com/in/timeojavaux" target="_blank" rel="noopener">LinkedIn</a>
+            </li>
+            <li>
+              <a class="button" href="https://github.com/timeojavaux" target="_blank" rel="noopener">GitHub</a>
+            </li>
+            <li>
+              <a class="button" href="../CV_Stage_Tim%C3%A9o_Javaux.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© 2026 Timéo Javaux</span>
+        <span
+          >Hand-made static site ·
+          <a href="https://github.com/timeojavaux/timeojavaux.github.io" target="_blank" rel="noopener"
+            >source code</a
+          ></span
+        >
+      </div>
+    </footer>
+
+    <dialog class="viewer" aria-labelledby="viewer-title">
+      <div class="viewer__bar">
+        <span id="viewer-title"></span>
+        <span class="viewer__count" aria-live="polite"></span>
+        <button class="viewer__close" type="button">close ×</button>
+      </div>
+      <div class="viewer__stage">
+        <img class="viewer__image" alt="" />
+        <button class="viewer__nav viewer__nav--prev" type="button" aria-label="Previous image">←</button>
+        <button class="viewer__nav viewer__nav--next" type="button" aria-label="Next image">→</button>
+      </div>
+    </dialog>
+    <dialog class="drawer" aria-labelledby="drawer-title">
+      <div class="drawer__bar">
+        <span>Learn more</span>
+        <button class="drawer__close" type="button">close ×</button>
+      </div>
+      <div class="drawer__content detail"></div>
+    </dialog>
+
+    <!-- Content of the “Learn more” panels (one <template> per panel) -->
+    <template id="detail-chu">
+      <h2 id="drawer-title">Business Intelligence internship</h2>
+      <p class="detail__meta">CHU Dijon Bourgogne (University Hospital) · Digital Services Department · Jan. 19 → Mar. 20, 2026</p>
+      <p class="detail__lead">
+        Second-year internship in the hospital's BI team, driven by one question:
+        <em>how do you turn raw hospital data into reliable indicators that help departments make decisions?</em>
+      </p>
+
+      <div class="stats">
+        <div><strong>9</strong><span>weeks of internship</span></div>
+        <div><strong>5</strong><span>missions carried out</span></div>
+        <div><strong>27</strong><span>departments audited</span></div>
+        <div><strong>~40</strong><span>unjustified access rights revoked</span></div>
+      </div>
+
+      <h3>Context</h3>
+      <p>
+        The Dijon Bourgogne University Hospital is the region's largest employer (around 9,000 staff). Its Digital Services
+        Department has over 90 people. I joined the Business Intelligence team, which turns data from hospital software into
+        decision-support reports.
+      </p>
+      <p>
+        Requests come in as GLPI tickets from departments (doctors, managers, HR…). My job: understand the real business need
+        behind each request, then translate it into reliable queries and reports.
+      </p>
+
+      <h3>Missions</h3>
+
+      <h4>COSI study: the main project</h4>
+      <p>
+        A psychiatry resident needed the results of 11 lab tests for a cohort of patients, within a window of 5 days before to
+        5 days after their admission.
+      </p>
+      <ul>
+        <li>First attempt with SAP BusinessObjects, which could not reach the required level of detail.</li>
+        <li>Switched to direct SQL on Oracle (with DBeaver): <code>ROW_NUMBER() OVER (PARTITION BY …)</code> to keep only the first result per patient, <code>CASE WHEN</code> to pivot test rows into columns.</li>
+        <li>Dedicated query for CRP, stored as <code>CLOB</code> with some text values (“&lt;0.4”).</li>
+        <li>Unit normalisation (mmol/L or g/L depending on labels) and loading into the resident's Excel file, following an ETL approach.</li>
+      </ul>
+      <p>Delivered and approved by the user.</p>
+
+      <h4>“Staff data” report</h4>
+      <p>
+        BusinessObjects report listing all staff present in 2025 (ID, RPPS number, working time, assignment…), used to update the
+        hospital's research directories. It required joining two different BO universes. Delivered and approved.
+      </p>
+
+      <h4>Recovery room activity (SSPI PTME)</h4>
+      <p>
+        Indicators comparing 2024 and 2025 (occupancy rate, average surgery duration) for an understaffed department that needed
+        facts to support its workload. I handled the request from requirements gathering to the first visualisations.
+      </p>
+
+      <h4>BusinessObjects access review</h4>
+      <p>
+        Annual audit of BO folder access for the hospital's 27 departments: inventory, sending to referents, follow-ups and a
+        tracking file. Result: around forty unjustified access rights revoked. I also spotted a flaw in the GLPI access request form
+        (a group pre-selected by default), which was then fixed.
+      </p>
+
+      <h4>User support</h4>
+      <ul>
+        <li>Failing query: the table was named <code>ORDER</code>, a reserved SQL word. Fixed with double quotes.</li>
+        <li>Helped a user with the BO interface (features hidden when opened from favourites).</li>
+        <li>GLPI ticket statistics for the imaging department.</li>
+      </ul>
+
+      <figure>
+        <img src="../img/chu/planning-stage.png" alt="Gantt chart of the missions during the internship" loading="lazy">
+        <figcaption>Mission schedule over the internship.</figcaption>
+      </figure>
+
+      <h3>Tools</h3>
+      <ul class="tags">
+        <li class="tag">SAP BusinessObjects</li>
+        <li class="tag">SQL (Oracle)</li>
+        <li class="tag">DBeaver</li>
+        <li class="tag">GLPI</li>
+        <li class="tag">Excel</li>
+        <li class="tag">Microsoft Teams</li>
+      </ul>
+
+      <h3>Takeaways</h3>
+      <p>
+        Degree skills put into practice: <strong>managing data</strong> and <strong>developing applications</strong>.
+        On a personal level: a first real work experience, autonomy, teamwork and a lot of communication with non-technical users.
+      </p>
+      <p>
+        The main challenge was the complexity of the hospital information system, with many tools and a medical vocabulary to learn
+        in order to bridge the gap between medical and technical language.
+      </p>
+      <p class="detail__note">Health data being confidential, no report or query screenshot is shown here.</p>
+    </template>
+    <template id="detail-antre2verres">
+      <h2 id="drawer-title">Antre2Verres (client/server)</h2>
+      <p class="detail__meta">Since Sept. 2026 · team project · 3 Scrum sprints</p>
+      <p class="detail__lead">After winning the call for tenders, our team is building a client/server web platform to digitally transform a bar-restaurant in Dijon.</p>
+
+      <h3>My role</h3>
+      <p class="placeholder">To fill in: what I built myself, the features I was responsible for…</p>
+
+      <h3>Challenges and lessons</h3>
+      <p class="placeholder">To fill in: a technical problem I faced and how I solved it, what I learned…</p>
+
+      <h3>Outcome</h3>
+      <p>Call for tenders won. Project in progress.</p>
+
+
+      <p class="detail__note">Screenshots: click the image on the project card.</p>
+    </template>
+    <template id="detail-audit-softs">
+      <h2 id="drawer-title">Web application audit and optimisation</h2>
+      <p class="detail__meta">Semester 4 · 2026 · team project</p>
+      <p class="detail__lead">Full audit and optimisation of an institutional application (SOFTS) for the IUT's computer science department: software quality, infrastructure security and eco-design.</p>
+
+      <h3>My role</h3>
+      <p class="placeholder">To fill in: what I built myself, the features I was responsible for…</p>
+
+      <h3>Challenges and lessons</h3>
+      <p class="placeholder">To fill in: a technical problem I faced and how I solved it, what I learned…</p>
+
+      <h3>Outcome</h3>
+      <p class="placeholder">To fill in: grade, delivery, feedback from the client or teachers…</p>
+
+
+      <p class="detail__note">Screenshots: click the image on the project card.</p>
+    </template>
+    <template id="detail-de-but">
+      <h2 id="drawer-title">DE-BUT</h2>
+      <p class="detail__meta">Semester 3 · 2025 · team project</p>
+      <p class="detail__lead">Client/server application for future computer science students: quizzes, exercises and interactive lessons, with student and teacher accounts.</p>
+
+      <h3>My role</h3>
+      <p class="placeholder">To fill in: what I built myself, the features I was responsible for…</p>
+
+      <h3>Challenges and lessons</h3>
+      <p class="placeholder">To fill in: a technical problem I faced and how I solved it, what I learned…</p>
+
+      <h3>Outcome</h3>
+      <p class="placeholder">To fill in: grade, delivery, feedback from the client or teachers…</p>
+
+      <h3>Links</h3>
+      <p><a href="https://github.com/timeojavaux/SAE-Website-DEBUT" target="_blank" rel="noopener">View the code on GitHub ↗</a></p>
+      <p class="detail__note">Screenshots: click the image on the project card.</p>
+    </template>
+    <template id="detail-ratatouille">
+      <h2 id="drawer-title">“Ratatouille” 2D game</h2>
+      <p class="detail__meta">Semester 2 · 2025 · team project</p>
+      <p class="detail__lead">Retro 2D game in C#, built from a framework and a detailed specification: UML design, object-oriented programming, unit tests and internationalisation.</p>
+
+      <h3>My role</h3>
+      <p class="placeholder">To fill in: what I built myself, the features I was responsible for…</p>
+
+      <h3>Challenges and lessons</h3>
+      <p class="placeholder">To fill in: a technical problem I faced and how I solved it, what I learned…</p>
+
+      <h3>Outcome</h3>
+      <p class="placeholder">To fill in: grade, delivery, feedback from the client or teachers…</p>
+
+      <h3>Links</h3>
+      <p><a href="https://github.com/timeojavaux/SAE-Game-Ratatouille" target="_blank" rel="noopener">View the code on GitHub ↗</a></p>
+      <p class="detail__note">Screenshots: click the image on the project card.</p>
+    </template>
+    <template id="detail-portfolio">
+      <h2 id="drawer-title">This portfolio</h2>
+      <p class="detail__meta">Since 2026 · personal project</p>
+      <p class="detail__lead">Static website designed and built on my own to present my background beyond a resume.</p>
+
+      <h3>My role</h3>
+      <p class="placeholder">To fill in: what I built myself, the features I was responsible for…</p>
+
+      <h3>Challenges and lessons</h3>
+      <p class="placeholder">To fill in: a technical problem I faced and how I solved it, what I learned…</p>
+
+      <h3>Outcome</h3>
+      <p class="placeholder">To fill in: grade, delivery, feedback from the client or teachers…</p>
+
+      <h3>Links</h3>
+      <p><a href="https://github.com/timeojavaux/timeojavaux.github.io" target="_blank" rel="noopener">View the code on GitHub ↗</a></p>
+    </template>
+  </body>
+</html>

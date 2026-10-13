@@ -1,388 +1,977 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<!-- Head -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timéo Javaux | Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Timéo Javaux · Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio de Timéo Javaux, étudiant en 3e année de BUT Informatique à Dijon, à la recherche d'un stage de 13 à 16 semaines à partir de mars 2027."
+    />
 
-    <!-- Tab icon -->
-    <link rel="icon" href="./img/logo.png" type="image/png">
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <link rel="alternate" hreflang="fr" href="https://timeojavaux.github.io/" />
+    <link rel="alternate" hreflang="en" href="https://timeojavaux.github.io/en/" />
 
-    <!-- Style -->
-    <link rel="stylesheet" href="styles/style.css">
+    <meta property="og:title" content="Timéo Javaux · Portfolio" />
+    <meta property="og:description" content="Étudiant en BUT Informatique, à la recherche d'un stage en 2027." />
+    <meta property="og:type" content="website" />
 
-    <!-- Font import -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=Pixelify+Sans:wght@400;600&display=swap"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
 
-    <!-- Smooth load animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="js/main.js" defer></script>
+  </head>
 
-    <!-- Icons -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"rel="stylesheet" type='text/css'/>
-</head>
+  <body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
 
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="#top">timeo.javaux</a>
 
-<!-- Body -->
-<body>
-    <!-- Top navigation bar -->
-    <nav class="navbar">
-        <div class="logo">TJ<span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="#home" class="active">Accueil</a></li>
-            <li><a href="#projects">Projets</a></li>
+        <nav aria-label="Navigation principale">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">menu</button>
+          <ul class="nav-list" id="nav-list">
             <li><a href="#experience">Expérience</a></li>
-            <li><a href="#education">Formations</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#interests">Intérêts</a></li>
-        </ul>
-    </nav>
-
-    <!-- Center presentation block -->
-    <header id="home" data-aos="fade-up">
-        <h1>Bonjour, moi c'est <span>Timéo</span>.</h1>
-        <p>Étudiant en 3ᵉ (et dernière) année de BUT Informatique, attiré par le développement, la Data, le support et l'électronique.</p>
-        <p>Ce portfolio présente mes expériences, mes projets ainsi que mes compétences en informatique.</p>
-        <div class="status-badge">🟢 En recherche d'un stage <i>(13 à 16 semaines entre le 15 mars et le 2 juillet 2027)</i></div>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#formation">Formation</a></li>
+            <li><a class="nav-contact" href="#contact">Contact</a></li>
+            <li>
+              <a href="CV_Stage_Tim%C3%A9o_Javaux.pdf" target="_blank" rel="noopener">CV ↓</a>
+            </li>
+            <li>
+              <a class="nav-lang" href="en/" hreflang="en" lang="en">EN</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <!-- Projects section -->
-    <main id="projects">
-        <h2><span class="arrow-section">></span> Projets</h2>
-        <section class="grid" id="projects">
+    <main id="main">
+      <!-- Accueil -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <canvas class="hero__sky" aria-hidden="true"></canvas>
+        <div class="container">
+          <p class="hero__status">
+            <span class="status-dot" aria-hidden="true"></span>Recherche un stage<br />
+            13 à 16 semaines · <span>15.03 → 02.07.2027</span>
+          </p>
+          <h1 class="hero__title" id="hero-title">Timéo<br />Javaux</h1>
+        </div>
+      </section>
 
-            <div class="card wide" data-aos="zoom-in">
-                <div class="project-header">
-                    <h3>Projet "Antre2Verres" (Client/Serveur)</h3>
-                    <span class="project-date">En cours depuis septembre 2026</span>
-                </div>
-                <p>Après avoir remporté l'appel d'offre du projet "Antre2Verres", notre équipe a pour objectif de développer une plateforme web (Client / Serveur) en 3 sprints permettant de transformer numériquement un bar / restaurant à Dijon.</p>
-                <div class="tags"><span>Client</span><span>Développement</span><span>Serveur</span><span>API</span><span>ASP.NET</span><span>Angular</span><span>MariaDB</span><span>Scrum</span></div>
+      <section class="intro" aria-label="Présentation">
+        <div class="container">
+          <div>
+            <p class="intro__lead">
+              Étudiant en 3ᵉ et dernière année de BUT Informatique, attiré par le développement, la data, le support et
+              l'électronique.
+            </p>
+            <div class="intro__actions">
+              <a class="button button--accent" href="CV_Stage_Tim%C3%A9o_Javaux.pdf" target="_blank" rel="noopener"
+                >Télécharger mon CV</a
+              >
+              <a class="button" href="#contact">Me contacter</a>
             </div>
+          </div>
 
-            <div class="card wide" data-aos="zoom-in" data-aos-delay="100">
-                <div class="project-header">
-                    <h3>Audit et Optimisation d'une application web</h3>
-                    <span class="project-date">Semestre 4 (2026)</span>
-                </div>
-                <p>Audit complet et optimisation d'une application institutionnelle (SOFTS) pour le département Informatique de l'IUT. Focus majeur sur la mise aux normes de la qualité logicielle, le renforcement de la sécurité de l'infrastructure et l'éco-conception.</p>
-                <div class="tags"><span>Audit</span><span>Optimisation</span><span>Qualité</span><span>Sécurité</span><span>Accessibilité</span><span>TypeScript</span><span>PHP</span></div>
+          <dl class="facts">
+            <div>
+              <dt>formation</dt>
+              <dd>BUT Informatique · 3ᵉ année</dd>
             </div>
-
-            <div class="card wide" data-aos="zoom-in" data-aos-delay="200">
-                <div class="project-header">
-                    <h3>Projet "DE-BUT"</h3>
-                    <span class="project-date">Semestre 3 (2025)</span>
-                </div>
-                <p>Développement en équipe d'une application client-serveur pour de futurs étudiants en BUT Informatique : incluant QCM, exercices et cours interactifs avec comptes étudiants et enseignants, intégrant UML, PHP/HTML/CSS côté client, GitHub, base de données SQL et respect des normes d'accessibilité.</p>
-                <div class="tags"><span>PHP</span><span>SQL</span><span>GitHub</span><span>Équipe</span></div>
+            <div>
+              <dt>parcours</dt>
+              <dd>A · Réalisation d'applications</dd>
             </div>
-
-            <div class="card wide" data-aos="zoom-in" data-aos-delay="300">
-                <div class="project-header">
-                    <h3>Jeu 2D "Ratatouille"</h3>
-                    <span class="project-date">Semestre 2 (2025)</span>
-                </div>
-                <p>Développement en équipe d'un jeu rétro 2D en C# à partir d'un framework et d'un cahier des charges précis, avec conception UML, programmation orientée objet, gestion de versions GitHub, tests unitaires et internationalisation.</p>
-                <div class="tags"><span>C#</span><span>Framework</span><span>GitHub</span><span>Équipe</span></div>
+            <div>
+              <dt>école</dt>
+              <dd>IUT Dijon-Auxerre</dd>
             </div>
-
-            <div class="card wide" data-aos="zoom-in" data-aos-delay="400">
-                <div class="project-header">
-                    <h3>Ce site Portfolio</h3>
-                    <span class="project-date">Depuis 2026</span>
-                </div>
-                <p>Conception et développement en autonomie d'un site statique (HTML5/CSS3) pour présenter mon parcours de manière dynamique (à la différence du CV). Projet en cours d'optimisation continue, mettant l'accent sur l'accessibilité (A11y), le responsive design et une expérience utilisateur fluide.</p>
-                <div class="tags"><span>Portfolio</span><span>HTML</span><span>CSS</span><span>GitHub</span></div>
+            <div>
+              <dt>stage</dt>
+              <dd>13 à 16 semaines, du 15 mars au 2 juillet 2027</dd>
             </div>
+            <div>
+              <dt>langues</dt>
+              <dd>Anglais bilingue · Espagnol intermédiaire</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
 
-            <a href="https://github.com/timeojavaux" class="card github-card" data-aos="zoom-in" data-aos-delay="500" target="_blank">
-                <h3>Mon GitHub</h3>
-                <p>Voir tous mes dépôts et mes contributions.  <span class="arrow">→</span></p>
+      <!-- Ce que je recherche -->
+      <section class="section" id="recherche" aria-labelledby="recherche-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">01</span>
+            <h2 class="section__title" id="recherche-title">Ce que je recherche</h2>
+          </header>
+
+          <dl class="wanted">
+            <div>
+              <dt>type</dt>
+              <dd>Stage de fin d'études, BUT Informatique (3ᵉ année)</dd>
+            </div>
+            <div>
+              <dt>période</dt>
+              <dd>13 à 16 semaines, entre le 15 mars et le 2 juillet 2027</dd>
+            </div>
+            <div>
+              <dt>lieu</dt>
+              <dd class="placeholder">Dijon / Pontarlier, France</dd>
+            </div>
+            <div class="wanted__wide">
+              <dt>domaines</dt>
+              <dd>Développement d'applications (web, logiciel) · Data / Business Intelligence · Support</dd>
+            </div>
+            <div>
+              <dt>permis</dt>
+              <dd class="placeholder">Permis B, non véhiculé</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- Expérience -->
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">02</span>
+            <h2 class="section__title" id="experience-title">Expérience</h2>
+          </header>
+
+          <ol class="timeline">
+            <li>
+              <div class="timeline__meta">
+                <time>Janv. 2026 – Mars 2026</time>
+                Dijon (21)
+              </div>
+              <div>
+                <h3>Stagiaire Business Intelligence</h3>
+                <p class="timeline__org">CHU Dijon Bourgogne</p>
+                <ul>
+                  <li>Recueil des besoins des utilisateurs.</li>
+                  <li>Analyse de données hospitalières (Big Data) en SQL.</li>
+                  <li>Mise à disposition de rapports d'aide à la prise de décision.</li>
+                  <li>Création de tableaux de bord avec SAP BusinessObjects.</li>
+                  <li>Suivi au quotidien des demandes des utilisateurs.</li>
+                  <li>Accompagnement et formation des utilisateurs à la prise en main des outils.</li>
+                  <li>Gestion des accès et participation aux revues de droits applicatifs.</li>
+                </ul>
+                <ul class="tags">
+                  <li class="tag">Stage</li>
+                  <li class="tag">Data</li>
+                  <li class="tag">Santé</li>
+                  <li class="tag">SAP BusinessObjects</li>
+                  <li class="tag">Business Intelligence</li>
+                  <li class="tag">Recueil de besoins</li>
+                </ul>
+                <button class="more" type="button" data-detail="chu">En savoir plus →</button>
+              </div>
+            </li>
+
+            <li>
+              <div class="timeline__meta">
+                <time>Juil. – Août 2025 et 2026</time>
+                Doubs (25)
+              </div>
+              <div>
+                <h3>Conseiller de vente</h3>
+                <p class="timeline__org">L'Entrepôt du Bricolage</p>
+                <ul>
+                  <li>Rayons sanitaire, carrelage, éclairage et peinture.</li>
+                  <li>Accueil et recueil des besoins techniques des clients.</li>
+                  <li>Conseil personnalisé et orientation vers les solutions adaptées.</li>
+                  <li>Gestion des stocks et organisation logistique des rayons.</li>
+                  <li>Développement de l'aisance relationnelle.</li>
+                  <li>Apprentissage sur le terrain au quotidien et en autonomie.</li>
+                </ul>
+                <ul class="tags">
+                  <li class="tag">Saisonnier</li>
+                  <li class="tag">Conseiller de vente</li>
+                  <li class="tag">Recueil de besoins</li>
+                  <li class="tag">Polyvalence</li>
+                  <li class="tag">Autonomie</li>
+                  <li class="tag">Relationnel</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Projets -->
+      <section class="section" id="projets" aria-labelledby="projets-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">03</span>
+            <h2 class="section__title" id="projets-title">Projets</h2>
+          </header>
+          <p class="section__note">Survolez ou cliquez sur l'image d'un projet pour voir ses captures d'écran.</p>
+
+          <!-- Captures -->
+          <div class="projects">
+            <article class="project">
+              <button class="project__media" type="button" data-project="antre2verres" data-seed="1"></button>
+              <div class="project__body">
+                <span class="project__date">Depuis sept. 2026</span>
+                <h3>Antre2Verres (client/serveur)</h3>
+                <p>
+                  Après avoir remporté l'appel d'offre, notre équipe développe en 3 sprints une plateforme web
+                  client/serveur pour transformer numériquement un bar-restaurant à Dijon.
+                </p>
+                <ul class="tags">
+                  <li class="tag">Client</li>
+                  <li class="tag">Développement</li>
+                  <li class="tag">Serveur</li>
+                  <li class="tag">API</li>
+                  <li class="tag">ASP.NET</li>
+                  <li class="tag">Angular</li>
+                  <li class="tag">MariaDB</li>
+                  <li class="tag">Scrum</li>
+                </ul>
+                <div class="project__actions">
+                  <button class="more" type="button" data-detail="antre2verres">En savoir plus →</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <button class="project__media" type="button" data-project="audit-softs" data-seed="2"></button>
+              <div class="project__body">
+                <span class="project__date">Semestre 4 · 2026</span>
+                <h3>Audit et optimisation d'une application web</h3>
+                <p>
+                  Audit complet et optimisation d'une application institutionnelle (SOFTS) pour le département
+                  Informatique de l'IUT : qualité logicielle, sécurité de l'infrastructure et éco-conception.
+                </p>
+                <ul class="tags">
+                  <li class="tag">Audit</li>
+                  <li class="tag">Optimisation</li>
+                  <li class="tag">Qualité</li>
+                  <li class="tag">Sécurité</li>
+                  <li class="tag">Accessibilité</li>
+                  <li class="tag">TypeScript</li>
+                  <li class="tag">PHP</li>
+                </ul>
+                <div class="project__actions">
+                  <button class="more" type="button" data-detail="audit-softs">En savoir plus →</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <button class="project__media" type="button" data-project="de-but" data-seed="3"></button>
+              <div class="project__body">
+                <span class="project__date">Semestre 3 · 2025</span>
+                <h3>DE-BUT</h3>
+                <p>
+                  Application client/serveur pour les futurs étudiants en BUT Informatique : QCM, exercices et cours
+                  interactifs, comptes étudiants et enseignants. UML, PHP/HTML/CSS côté client, base de données SQL,
+                  GitHub et respect des normes d'accessibilité.
+                </p>
+                <ul class="tags">
+                  <li class="tag">PHP</li>
+                  <li class="tag">SQL</li>
+                  <li class="tag">GitHub</li>
+                  <li class="tag">Équipe</li>
+                </ul>
+                <div class="project__actions">
+                  <button class="more" type="button" data-detail="de-but">En savoir plus →</button>
+                  <a
+                    class="more more--ghost"
+                    href="https://github.com/timeojavaux/SAE-Website-DEBUT"
+                    target="_blank"
+                    rel="noopener"
+                    >Code ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <button class="project__media" type="button" data-project="ratatouille" data-seed="4"></button>
+              <div class="project__body">
+                <span class="project__date">Semestre 2 · 2025</span>
+                <h3>Jeu 2D « Ratatouille »</h3>
+                <p>
+                  Jeu rétro 2D en C# développé en équipe à partir d'un framework et d'un cahier des charges : conception
+                  UML, programmation orientée objet, GitHub, tests unitaires et internationalisation.
+                </p>
+                <ul class="tags">
+                  <li class="tag">C#</li>
+                  <li class="tag">Framework</li>
+                  <li class="tag">GitHub</li>
+                  <li class="tag">Équipe</li>
+                </ul>
+                <div class="project__actions">
+                  <button class="more" type="button" data-detail="ratatouille">En savoir plus →</button>
+                  <a
+                    class="more more--ghost"
+                    href="https://github.com/timeojavaux/SAE-Game-Ratatouille"
+                    target="_blank"
+                    rel="noopener"
+                    >Code ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project__media" data-seed="5" aria-hidden="true"></div>
+              <div class="project__body">
+                <span class="project__date">Depuis 2026</span>
+                <h3>Ce portfolio</h3>
+                <p>
+                  Site statique conçu et développé en autonomie pour présenter mon parcours autrement qu'un CV. Optimisé
+                  en continu : accessibilité, responsive design, version anglaise.
+                </p>
+                <ul class="tags">
+                  <li class="tag">Portfolio</li>
+                  <li class="tag">HTML</li>
+                  <li class="tag">CSS</li>
+                  <li class="tag">JavaScript</li>
+                  <li class="tag">GitHub</li>
+                </ul>
+                <div class="project__actions">
+                  <button class="more" type="button" data-detail="portfolio">En savoir plus →</button>
+                  <a
+                    class="more more--ghost"
+                    href="https://github.com/timeojavaux/timeojavaux.github.io"
+                    target="_blank"
+                    rel="noopener"
+                    >Code ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <a class="project project--link" href="https://github.com/timeojavaux" target="_blank" rel="noopener">
+              <h3>GitHub</h3>
+              <p>Tous mes dépôts et mes contributions.</p>
+              <span class="arrow" aria-hidden="true">→</span>
             </a>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- Compétences -->
+      <section class="section" id="competences" aria-labelledby="competences-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">04</span>
+            <h2 class="section__title" id="competences-title">Compétences</h2>
+          </header>
+
+          <div class="skills">
+            <div class="skills__main">
+              <h3>Stack principale</h3>
+              <ul class="tags">
+                <li class="tag tag--main">C#</li>
+                <li class="tag tag--main">PHP</li>
+                <li class="tag tag--main">Angular</li>
+                <li class="tag tag--main">HTML / CSS</li>
+                <li class="tag tag--main">JavaScript</li>
+                <li class="tag tag--main">TypeScript</li>
+                <li class="tag tag--main">Java</li>
+                <li class="tag tag--main">SQL</li>
+              </ul>
+            </div>
+            <p class="skills__label">Autres compétences</p>
+            <div class="skills__group">
+              <h3>Développement &amp; langages</h3>
+              <div class="skills__row">
+                <h4>Web</h4>
+                <ul class="tags">
+                  <li class="tag">WordPress</li>
+                </ul>
+              </div>
+              <div class="skills__row">
+                <h4>Applications</h4>
+                <ul class="tags">
+                  <li class="tag">C++</li>
+                  <li class="tag">C</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="skills__group">
+              <h3>Data &amp; frameworks</h3>
+              <div class="skills__row">
+                <h4>Bases de données &amp; logique</h4>
+                <ul class="tags">
+                  <li class="tag">Oracle SQL</li>
+                  <li class="tag">MySQL</li>
+                  <li class="tag">MariaDB</li>
+                  <li class="tag">SQL Developer</li>
+                  <li class="tag">DBeaver</li>
+                  <li class="tag">Neo4J</li>
+                  <li class="tag">Prolog</li>
+                  <li class="tag">Hibernate</li>
+                </ul>
+              </div>
+              <div class="skills__row">
+                <h4>Frameworks &amp; librairies web</h4>
+                <ul class="tags">
+                  <li class="tag">.NET</li>
+                  <li class="tag">AngularJS</li>
+                  <li class="tag">jQuery</li>
+                  <li class="tag">Three.js</li>
+                  <li class="tag">NestJS</li>
+                  <li class="tag">Express</li>
+                </ul>
+              </div>
+              <div class="skills__row">
+                <h4>Data science &amp; analyse</h4>
+                <ul class="tags">
+                  <li class="tag">Python</li>
+                  <li class="tag">RStudio</li>
+                  <li class="tag">Pandas</li>
+                  <li class="tag">NumPy</li>
+                  <li class="tag">Matplotlib</li>
+                  <li class="tag">Scikit-learn</li>
+                </ul>
+              </div>
+              <div class="skills__row">
+                <h4>Serveurs &amp; gestionnaires</h4>
+                <ul class="tags">
+                  <li class="tag">Apache</li>
+                  <li class="tag">Debian</li>
+                  <li class="tag">Composer</li>
+                  <li class="tag">Jest</li>
+                  <li class="tag">Postman</li>
+                  <li class="tag">Swagger</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="skills__group">
+              <h3>Outils &amp; environnement</h3>
+              <div class="skills__row">
+                <h4>Gestion de version &amp; dev</h4>
+                <ul class="tags">
+                  <li class="tag">UML</li>
+                  <li class="tag">Git</li>
+                  <li class="tag">GitHub</li>
+                  <li class="tag">Bash</li>
+                  <li class="tag">Docker</li>
+                  <li class="tag">vSphere</li>
+                </ul>
+              </div>
+              <div class="skills__row">
+                <h4>IDE &amp; éditeurs</h4>
+                <ul class="tags">
+                  <li class="tag">Visual Studio Code</li>
+                  <li class="tag">Visual Studio 2022</li>
+                  <li class="tag">IntelliJ</li>
+                  <li class="tag">Android Studio</li>
+                  <li class="tag">Spyder</li>
+                  <li class="tag">Arduino</li>
+                  <li class="tag">FileZilla</li>
+                </ul>
+              </div>
+              <div class="skills__row">
+                <h4>Organisation &amp; design</h4>
+                <ul class="tags">
+                  <li class="tag">Trello</li>
+                  <li class="tag">Canva</li>
+                </ul>
+              </div>
+            </div>
+            <div class="skills__group">
+              <h3>Langues</h3>
+              <div class="skills__row">
+                <h4>Anglais</h4>
+                <ul class="tags">
+                  <li class="tag">Bilingue</li>
+                </ul>
+              </div>
+              <div class="skills__row">
+                <h4>Espagnol</h4>
+                <ul class="tags">
+                  <li class="tag">Bonne compréhension · expression orale à renforcer</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Savoir-être -->
+      <section class="section" id="savoir-etre" aria-labelledby="savoir-etre-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">05</span>
+            <h2 class="section__title" id="savoir-etre-title">Savoir-être</h2>
+          </header>
+
+          <ul class="cards">
+            <li>
+              <h3>Recueil de besoins</h3>
+              <p>
+                Auprès des utilisateurs du CHU comme des clients en magasin : écouter, reformuler, proposer la bonne
+                solution.
+              </p>
+            </li>
+            <li>
+              <h3>Pédagogie</h3>
+              <p>Accompagnement et formation des utilisateurs à la prise en main des outils de reporting.</p>
+            </li>
+            <li>
+              <h3>Travail en équipe</h3>
+              <p>Projets menés à plusieurs, en sprints Scrum, avec versionnage sous Git et GitHub.</p>
+            </li>
+            <li>
+              <h3>Autonomie</h3>
+              <p>Apprentissage sur le terrain et projets personnels menés seul, comme ce portfolio.</p>
+            </li>
+            <li>
+              <h3>Polyvalence</h3>
+              <p>Du développement à la data et au support, et quatre rayons différents en magasin.</p>
+            </li>
+            <li>
+              <h3>Relationnel</h3>
+              <p>Aisance développée au contact quotidien des clients et des équipes.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Formation -->
+      <section class="section" id="formation" aria-labelledby="formation-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">06</span>
+            <h2 class="section__title" id="formation-title">Formation</h2>
+          </header>
+
+          <ol class="timeline">
+            <li>
+              <div class="timeline__meta">
+                <time>Sept. 2024 – Aujourd'hui</time>
+                Dijon (21)
+              </div>
+              <div>
+                <h3>BUT Informatique</h3>
+                <p class="timeline__org">IUT Dijon-Auxerre</p>
+                <p>Parcours A : réalisation d'applications (conception, développement, validation).</p>
+                <p>Actuellement en 3ᵉ année.</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline__meta">
+                <time>Sept. 2021 – Juin 2024</time>
+                Pontarlier (25)
+              </div>
+              <div>
+                <h3>Baccalauréat général</h3>
+                <p class="timeline__org">Lycée Xavier Marmier</p>
+                <p>Spécialités Mathématiques et NSI (Numérique et Sciences Informatiques).</p>
+                <p>Mention bien.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section class="section" id="certifications" aria-labelledby="certifications-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">07</span>
+            <h2 class="section__title" id="certifications-title">Certifications</h2>
+          </header>
+
+          <!-- Pour ajouter une certification : dupliquer un <li>. -->
+          <ol class="timeline">
+            <li>
+              <div class="timeline__meta">
+                <strong>freeCodeCamp</strong>
+              </div>
+              <div>
+                <h3>Foundational C#</h3>
+                <p>Certification en ligne sur les bases du langage C#.</p>
+                <ul class="tags">
+                  <li class="tag">C#</li>
+                  <li class="tag">Certification</li>
+                </ul>
+                <a class="more more--ghost" href="https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/" target="_blank" rel="noopener">Voir la formation ↗</a>
+              </div>
+            </li>
+            <li>
+              <div class="timeline__meta">
+                <strong>MOOC</strong>
+              </div>
+              <div>
+                <h3>Qu'est-ce que l'OSINT ?</h3>
+                <p>Initiation au renseignement en sources ouvertes (Open Source Intelligence).</p>
+                <ul class="tags">
+                  <li class="tag">OSINT</li>
+                  <li class="tag">Cybersécurité</li>
+                </ul>
+                <a class="more more--ghost" href="https://mooc.osintfr.com/" target="_blank" rel="noopener">Voir la formation ↗</a>
+              </div>
+            </li>
+            <li>
+              <div class="timeline__meta">
+                <strong>OpenClassrooms</strong>
+              </div>
+              <div>
+                <h3>Les bases de la cybersécurité</h3>
+                <p>Formation en ligne sur les fondamentaux de la sécurité informatique.</p>
+                <ul class="tags">
+                  <li class="tag">Cybersécurité</li>
+                  <li class="tag">Formation</li>
+                </ul>
+                <a class="more more--ghost" href="https://openclassrooms.com/fr/courses/8028761-decouvrez-l-univers-de-la-cybersecurite" target="_blank" rel="noopener">Voir la formation ↗</a>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Centres d'intérêt -->
+      <section class="section" id="interets" aria-labelledby="interets-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">08</span>
+            <h2 class="section__title" id="interets-title">Centres d'intérêt</h2>
+          </header>
+
+          <ul class="interests">
+            <li>Musique &amp; festivals</li>
+            <li>Films &amp; séries</li>
+            <li>Nature</li>
+            <li>Architecture</li>
+            <li>Décoration &amp; design</li>
+            <li>Bricolage</li>
+            <li>Voyages</li>
+            <li>Jeux vidéo</li>
+            <li>Veille informatique</li>
+            <li>Robotique &amp; électronique</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <header class="section__head">
+            <span class="section__index">09</span>
+            <h2 class="section__title" id="contact-title">Contact</h2>
+          </header>
+
+          <p class="contact__lead">
+            Un stage de 13 à 16 semaines entre le 15 mars et le 2 juillet 2027 ? Écrivez-moi ou retrouvez-moi sur
+            LinkedIn.
+          </p>
+          <ul class="contact__links">
+            <li>
+              <a class="button" href="mailto:timeo.javaux@iut-dijon.u-bourgogne.fr">Mail</a>
+            </li>
+            <li>
+              <a class="button" href="https://linkedin.com/in/timeojavaux" target="_blank" rel="noopener">LinkedIn</a>
+            </li>
+            <li>
+              <a class="button" href="https://github.com/timeojavaux" target="_blank" rel="noopener">GitHub</a>
+            </li>
+            <li>
+              <a class="button" href="CV_Stage_Tim%C3%A9o_Javaux.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
-    <!-- Experiences section -->
-    <section id="experience"> 
-        <h2><span class="arrow-section">></span> Expériences</h2>
-        
-        <div class="exp-item" data-aos="fade-left">
-            <div class="edu-header">
-                <div class="edu-title">
-                    <h3>STAGIAIRE BUSINESS INTELLIGENCE</h3>
-                    <span>CHU DE DIJON BOURGOGNE - DIJON (21)</span>
-                </div>
-                <div class="edu-date">Janvier 2026 - Mars 2026</div>
-            </div>
-            <ul>
-                <li>Recueil de besoins des utilisateurs.</li>
-                <li>Analyse de données hospitalières (BigData) via SQL.</li>
-                <li>Mise à disposition de rapports d'aide à la prise de décision.</li>
-                <li>Création de tableaux de bord avec SAP BusinessObjects.</li>
-                <li>Suivi au quotidient des demandes des utilisateurs.</li>
-                <li>Accompagnement et formation des utilisateurs à la prise en main des outils.</li>
-                <li>Gestion des accès et participation aux revues de droits applicatifs.</li>
-            </ul>
-            <div class="tags"><span>Stage</span><span>Data</span><span>Santé</span><span>SAP BusinessObjects</span><span>Business Intelligence</span><span>Recueil de besoins</span></div>
-        </div>
+    <footer class="site-footer">
+      <div class="container">
+        <span>© 2026 Timéo Javaux</span>
+        <span>
+          <a href="https://github.com/timeojavaux/timeojavaux.github.io" target="_blank" rel="noopener"
+            >code source du site</a
+          ></span
+        >
+      </div>
+    </footer>
 
-        <div class="exp-item" data-aos="fade-left" data-aos-delay="100">
-            <div class="edu-header">
-                <div class="edu-title">
-                    <h3>CONSEILLER DE VENTE</h3>
-                    <span>L'ENTREPÔT DU BRICOLAGE - DOUBS (25)</span>
-                </div>
-                <div class="edu-date">Juillet - Août 2025 et 2026</div>
-            </div>
-            <ul>
-                <li>Rayons sanitaire, carrelage, éclairage et peinture.</li>
-                <li>Accueil et recueil des besoins techniques des clients.</li>
-                <li>Conseil personnalisé et orientation vers les solutions adaptées.</li>
-                <li>Gestion des stocks et organisation logistique des rayons.</li>
-                <li>Développement de l'aisance relationnelle.</li>
-                <li>Apprentissage sur le terrain au quotidien et en autonomie.</li>
-            </ul>
-            <div class="tags"><span>Saisonnier</span><span>Conseiller de vente</span><span>Recueil de besoins</span><span>Polyvalence</span><span>Autonomie</span><span>Relationnel</span></div>
-        </div>
-    </section>
+    <dialog class="viewer" aria-labelledby="viewer-title">
+      <div class="viewer__bar">
+        <span id="viewer-title"></span>
+        <span class="viewer__count" aria-live="polite"></span>
+        <button class="viewer__close" type="button">fermer ×</button>
+      </div>
+      <div class="viewer__stage">
+        <img class="viewer__image" alt="" />
+        <button class="viewer__nav viewer__nav--prev" type="button" aria-label="Image précédente">←</button>
+        <button class="viewer__nav viewer__nav--next" type="button" aria-label="Image suivante">→</button>
+      </div>
+    </dialog>
+    <dialog class="drawer" aria-labelledby="drawer-title">
+      <div class="drawer__bar">
+        <span>En savoir plus</span>
+        <button class="drawer__close" type="button">fermer ×</button>
+      </div>
+      <div class="drawer__content detail"></div>
+    </dialog>
 
-    <!-- Education section -->
-    <section id="education"> 
-        <h2><span class="arrow-section">></span> Formations</h2>
-    
-        <div class="education-item" data-aos="fade-left">
-            <div class="edu-header">
-                <div class="edu-title">
-                    <h3>BUT INFORMATIQUE</h3>
-                    <span>IUT DIJON-AUXERRE - DIJON (21)</span>
-                </div>
-                <div class="edu-date">Septembre 2024 - Aujourd'hui</div>
-            </div>
-            <p>Spécialisation Réalisation d'applications (conception, développement, validation) (Parcours A).</p>
-            <p>Actuellement en 3ème année.</p>
-        </div>
+    <!-- Contenus des panneaux « En savoir plus » (un <template> par fiche) -->
+    <template id="detail-chu">
+      <h2 id="drawer-title">Stage Business Intelligence</h2>
+      <p class="detail__meta">CHU Dijon Bourgogne · Direction des Services Numériques · 19 janv. → 20 mars 2026</p>
+      <p class="detail__lead">
+        Stage de 2ᵉ année au sein de l'équipe BI du CHU, avec une question en fil rouge :
+        <em
+          >comment transformer les données brutes de l'hôpital en indicateurs fiables pour le pilotage des services
+          ?</em
+        >
+      </p>
 
-        <div class="education-item" data-aos="fade-left" data-aos-delay="100">
-            <div class="edu-header">
-                <div class="edu-title">
-                    <h3>BACCALAURÉAT GÉNÉRAL</h3>
-                    <span>LYCÉE XAVIER MARMIER - PONTARLIER (25)</span>
-                </div>
-                <div class="edu-date">Septembre 2021 - Juin 2024</div>
-            </div>
-            <p>Spécialités Mathématiques et NSI (Numérique et Sciences Informatiques).</p>
-            <p>Mention bien obtenue.</p>
-        </div>
-    </section>
+      <div class="stats">
+        <div><strong>9</strong><span>semaines de stage</span></div>
+        <div><strong>5</strong><span>missions menées</span></div>
+        <div><strong>27</strong><span>pôles et directions audités</span></div>
+        <div><strong>~40</strong><span>droits d'accès injustifiés révoqués</span></div>
+      </div>
 
-    <!-- Skills section -->
-    <section id="skills" class="skills-section">
-        <h2><span class="arrow-section">></span> Compétences</h2>
-        
-        <!-- DEVELOPPEMENT -->
-        <div class="skill-category" data-aos="fade-up">
-            <h3>Développement & Langages</h3>
-            
-            <div class="skill-subcategory">
-                <h4>Web</h4>
-                <ul class="skills-grid">
-                    <li data-label="HTML5"><i class="devicon-html5-plain"></i></li>
-                    <li data-label="CSS3"><i class="devicon-css3-plain"></i></li>
-                    <li data-label="PHP"><i class="devicon-php-plain"></i></li>
-                    <li data-label="JavaScript"><i class="devicon-javascript-plain"></i></li>
-                    <li data-label="TypeScript"><i class="devicon-typescript-plain"></i></li>
-                    <li data-label="WordPress"><i class="devicon-wordpress-plain"></i></li>
-                </ul>
-            </div>
+      <h3>Contexte</h3>
+      <p>
+        Le CHU de Dijon Bourgogne est le plus grand employeur de la région (environ 9 000 professionnels). Sa Direction
+        des Services Numériques compte plus de 90 agents. J'ai intégré l'équipe Business Intelligence, qui transforme
+        les données des logiciels hospitaliers en rapports d'aide à la décision.
+      </p>
+      <p>
+        Les demandes arrivent sous forme de tickets GLPI envoyés par les services (médecins, cadres, RH…). Mon rôle :
+        comprendre le vrai besoin métier derrière chaque demande, puis le traduire en requêtes et en rapports fiables.
+      </p>
 
-            <div class="skill-subcategory">
-                <h4>Applications</h4>
-                <ul class="skills-grid">
-                    <li data-label="C#"><i class="devicon-csharp-plain"></i></li>
-                    <li data-label="C++"><i class="devicon-cplusplus-plain"></i></li>
-                    <li data-label="C"><i class="devicon-c-plain"></i></li>
-                    <li data-label="Java"><i class="devicon-java-plain"></i></li>
-                </ul>
-            </div>
-        </div>
+      <h3>Missions</h3>
 
-        <!-- DATA & FRAMEWORKS -->
-        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-            <h3>Data & Frameworks</h3>
-            
-            <div class="skill-subcategory">
-                <h4>Bases de données & Logique</h4>
-                <ul class="skills-grid">
-                    <li data-label="Oracle SQL"><i class="devicon-oracle-original"></i></li>
-                    <li data-label="MySQL"><i class="devicon-mysql-plain"></i></li>
-                    <li data-label="MariaDB"><i class="devicon-mariadb-plain"></i></li>
-                    <li data-label="SQL Developer"><i class="devicon-sqldeveloper-plain"></i></li>
-                    <li data-label="DBeaver"><i class="devicon-dbeaver-plain"></i></li>
-                    <li data-label="Neo4J"><i class="devicon-neo4j-plain"></i></li>
-                    <li data-label="Prolog"><i class="devicon-prolog-plain"></i></li>
-                    <li data-label="Hibernate"><i class="devicon-hibernate-plain"></i></li>
-                </ul>
-            </div>
+      <h4>Étude COSI : le projet fil rouge</h4>
+      <p>
+        Un interne d'une unité de psychiatrie avait besoin des résultats de 11 examens biologiques pour une cohorte de
+        patients, sur une fenêtre de 5 jours avant à 5 jours après leur admission.
+      </p>
+      <ul>
+        <li>Première approche avec SAP BusinessObjects, insuffisante pour ce niveau de détail.</li>
+        <li>
+          Passage au SQL direct sur Oracle (via DBeaver) : <code>ROW_NUMBER() OVER (PARTITION BY …)</code> pour ne
+          garder que le premier résultat par patient, <code>CASE WHEN</code> pour transformer les lignes d'examens en
+          colonnes.
+        </li>
+        <li>
+          Requête dédiée pour la CRP, stockée en type <code>CLOB</code> avec des valeurs parfois textuelles (« &lt;0,4
+          »).
+        </li>
+        <li>
+          Normalisation des unités (mmol/L ou g/L selon les libellés) et chargement dans le fichier Excel de l'interne,
+          en suivant une logique ETL.
+        </li>
+      </ul>
+      <p>Version livrée et validée par l'utilisateur.</p>
 
-            <div class="skill-subcategory">
-                <h4>Frameworks & Librairies Web</h4>
-                <ul class="skills-grid">
-                    <li data-label=".NET"><i class="devicon-dotnetcore-plain"></i></li>
-                    <li data-label="AngularJS"><i class="devicon-angularjs-plain"></i></li>
-                    <li data-label="JQuery"><i class="devicon-jquery-plain"></i></li>
-                    <li data-label="ThreeJS"><i class="devicon-threejs-original"></i></li>
-                    <li data-label="NestJS"><i class="devicon-nestjs-plain"></i></li>
-                    <li data-label="Express"><i class="devicon-express-original"></i></li>
-                </ul>
-            </div>
+      <h4>Rapport « Données agents »</h4>
+      <p>
+        Rapport BusinessObjects recensant tout le personnel présent en 2025 (matricule, RPPS, quotité, affectation…),
+        utilisé pour mettre à jour les annuaires de recherche du CHU. Il m'a fallu notamment joindre deux univers BO
+        différents. Rapport livré et validé.
+      </p>
 
-            <div class="skill-subcategory">
-                <h4>Data Science & Analyse</h4>
-                <ul class="skills-grid">
-                    <li data-label="Python"><i class="devicon-python-plain"></i></li>
-                    <li data-label="RStudio"><i class="devicon-rstudio-plain"></i></li>
-                    <li data-label="Pandas"><i class="devicon-pandas-plain"></i></li>
-                    <li data-label="NumPy"><i class="devicon-numpy-plain"></i></li>
-                    <li data-label="Matplotlib"><i class="devicon-matplotlib-plain"></i></li>
-                    <li data-label="Scikit-learn"><i class="devicon-scikitlearn-plain"></i></li>
-                </ul>
-            </div>
+      <h4>Activité de la salle de réveil (SSPI PTME)</h4>
+      <p>
+        Indicateurs comparant 2024 et 2025 (taux d'occupation, durée moyenne des interventions) pour un service en
+        sous-effectif, qui avait besoin de faits pour objectiver sa charge de travail. J'ai pris en charge la demande du
+        recueil du besoin jusqu'aux premières visualisations.
+      </p>
 
-            <div class="skill-subcategory">
-                <h4>Serveurs & Gestionnaires</h4>
-                <ul class="skills-grid">
-                    <li data-label="Apache"><i class="devicon-apache-plain"></i></li>
-                    <li data-label="Debian"><i class="devicon-debian-plain"></i></li>
-                    <li data-label="Composer"><i class="devicon-composer-line"></i></li>
-                    <li data-label="Jest"><i class="devicon-jest-plain"></i></li>
-                    <li data-label="Postman"><i class="devicon-postman-plain"></i></li>
-                    <li data-label="Swagger"><i class="devicon-swagger-plain"></i></li>
-                </ul>
-            </div>
-        </div>
+      <h4>Revue des droits BusinessObjects</h4>
+      <p>
+        Audit annuel des accès aux répertoires BO des 27 pôles et directions : inventaire, envoi aux référents, relances
+        et fichier de suivi. Résultat : une quarantaine de droits injustifiés révoqués. J'ai aussi repéré une erreur
+        dans le formulaire GLPI de demande d'accès (un groupe pré-sélectionné par défaut), qui a été corrigée.
+      </p>
 
-        <!-- OUTILS & ENVIRONNEMENT -->
-        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-            <h3>Outils & Environnement</h3>
-            
-            <div class="skill-subcategory">
-                <h4>Gestion de version & Dev</h4>
-                <ul class="skills-grid">
-                    <li data-label="UML"><i class="devicon-unifiedmodelinglanguage-plain"></i></li>
-                    <li data-label="Git"><i class="devicon-git-plain"></i></li>
-                    <li data-label="Github"><i class="devicon-github-plain"></i></li>
-                    <li data-label="Bash"><i class="devicon-bash-plain"></i></li>
-                    <li data-label="Docker"><i class="devicon-docker-plain"></i></li>
-                    <li data-label="vSphere"><i class="devicon-vsphere-plain"></i></li>
-                </ul>
-            </div>
+      <h4>Support utilisateur</h4>
+      <ul>
+        <li>
+          Requête en erreur : la table s'appelait <code>ORDER</code>, un mot réservé SQL. Résolu avec des guillemets
+          doubles.
+        </li>
+        <li>Accompagnement d'une utilisatrice sur l'interface BO (fonctions masquées depuis les favoris).</li>
+        <li>Statistiques de tickets GLPI pour le service d'imagerie.</li>
+      </ul>
 
-            <div class="skill-subcategory">
-                <h4>IDE & Éditeurs</h4>
-                <ul class="skills-grid">
-                    <li data-label="Visual Studio Code"><i class="devicon-vscode-plain"></i></li>
-                    <li data-label="Visual Studio 2022"><i class="devicon-visualstudio-plain"></i></li>
-                    <li data-label="IntelliJ"><i class="devicon-intellij-plain"></i></li>
-                    <li data-label="Android Studio"><i class="devicon-androidstudio-plain"></i></li>
-                    <li data-label="Spyder"><i class="devicon-spyder-plain"></i></li>
-                    <li data-label="Arduino"><i class="devicon-arduino-plain"></i></li>
-                    <li data-label="Filezilla"><i class="devicon-filezilla-plain"></i></li>
-                </ul>
-            </div>
+      <figure>
+        <img
+          src="img/chu/planning-stage.png"
+          alt="Diagramme de Gantt du planning des missions pendant le stage"
+          loading="lazy"
+        />
+        <figcaption>Planning des missions sur la période de stage.</figcaption>
+      </figure>
 
-            <div class="skill-subcategory">
-                <h4>Organisation & Design</h4>
-                <ul class="skills-grid">
-                    <li data-label="Trello"><i class="devicon-trello-plain"></i></li>
-                    <li data-label="Canva"><i class="devicon-canva-plain"></i></li>
-                </ul>
-            </div>
-        </div>
-    </section>
+      <h3>Outils</h3>
+      <ul class="tags">
+        <li class="tag">SAP BusinessObjects</li>
+        <li class="tag">SQL (Oracle)</li>
+        <li class="tag">DBeaver</li>
+        <li class="tag">GLPI</li>
+        <li class="tag">Excel</li>
+        <li class="tag">Microsoft Teams</li>
+      </ul>
 
-    <!-- Interests section -->
-    <section id="interests">
-        <h2><span class="arrow-section">></span> Centres d'intérêt</h2>
-        <div class="interests-grid" data-aos="fade-up">
-            
-            <div class="interest-item">
-                <i class="fas fa-music"></i>
-                <span>Musique & Festivals</span>
-            </div>
+      <h3>Bilan</h3>
+      <p>
+        Compétences du BUT mobilisées : <strong>gérer des données</strong> et
+        <strong>réaliser un développement d'application</strong>. Côté personnel : une première vraie expérience en
+        entreprise, de l'autonomie, le travail en équipe et beaucoup de communication avec des utilisateurs non
+        informaticiens.
+      </p>
+      <p>
+        La principale difficulté a été la complexité du système d'information hospitalier, avec de nombreux outils et un
+        vocabulaire métier à apprendre pour faire le pont entre le langage médical et le langage informatique.
+      </p>
+      <p class="detail__note">
+        Les données de santé étant confidentielles, aucune capture de rapport ou de requête n'est présentée ici.
+      </p>
+    </template>
+    <template id="detail-antre2verres">
+      <h2 id="drawer-title">Antre2Verres (client/serveur)</h2>
+      <p class="detail__meta">Depuis sept. 2026 · projet d'équipe · 3 sprints Scrum</p>
+      <p class="detail__lead">
+        Après avoir remporté l'appel d'offre, notre équipe développe une plateforme web client/serveur pour transformer
+        numériquement un bar-restaurant à Dijon.
+      </p>
 
-            <div class="interest-item">
-                <i class="fas fa-film"></i>
-                <span>Films & Séries</span>
-            </div>
+      <h3>Mon rôle</h3>
+      <p class="placeholder">
+        À compléter : ce que j'ai développé personnellement, les fonctionnalités dont j'étais responsable…
+      </p>
 
-            <div class="interest-item">
-                <i class="fas fa-tree"></i>
-                <span>Nature</span>
-            </div>
+      <h3>Difficultés et apprentissages</h3>
+      <p class="placeholder">
+        À compléter : un problème technique rencontré et comment je l'ai résolu, ce que j'en retiens…
+      </p>
 
-            <div class="interest-item">
-                <i class="fas fa-building"></i>
-                <span>Architecture</span>
-            </div>
+      <h3>Résultat</h3>
+      <p>Appel d'offre remporté. Projet en cours.</p>
 
-            <div class="interest-item">
-                <i class="fas fa-couch"></i>
-                <span>Décoration & Design</span>
-            </div>
+      <p class="detail__note">Captures d'écran : cliquez sur l'image de la carte du projet.</p>
+    </template>
+    <template id="detail-audit-softs">
+      <h2 id="drawer-title">Audit et optimisation d'une application web</h2>
+      <p class="detail__meta">Semestre 4 · 2026 · projet d'équipe</p>
+      <p class="detail__lead">
+        Audit complet et optimisation d'une application institutionnelle (SOFTS) pour le département Informatique de
+        l'IUT : qualité logicielle, sécurité de l'infrastructure et éco-conception.
+      </p>
 
-            <div class="interest-item">
-                <i class="fas fa-tools"></i>
-                <span>Bricolage</span>
-            </div>
+      <h3>Mon rôle</h3>
+      <p class="placeholder">
+        À compléter : ce que j'ai développé personnellement, les fonctionnalités dont j'étais responsable…
+      </p>
 
-            <div class="interest-item">
-                <i class="fas fa-plane"></i>
-                <span>Voyages</span>
-            </div>
+      <h3>Difficultés et apprentissages</h3>
+      <p class="placeholder">
+        À compléter : un problème technique rencontré et comment je l'ai résolu, ce que j'en retiens…
+      </p>
 
-            <div class="interest-item">
-                <i class="fas fa-gamepad"></i>
-                <span>Jeux Vidéo</span>
-            </div>
+      <h3>Résultat</h3>
+      <p class="placeholder">À compléter : note, livraison, retour du client ou des enseignants…</p>
 
-            <div class="interest-item">
-                <i class="fas fa-laptop-code"></i>
-                <span>Veille Informatique</span>
-            </div>
+      <p class="detail__note">Captures d'écran : cliquez sur l'image de la carte du projet.</p>
+    </template>
+    <template id="detail-de-but">
+      <h2 id="drawer-title">DE-BUT</h2>
+      <p class="detail__meta">Semestre 3 · 2025 · projet d'équipe</p>
+      <p class="detail__lead">
+        Application client/serveur pour les futurs étudiants en BUT Informatique : QCM, exercices et cours interactifs,
+        avec des comptes étudiants et enseignants.
+      </p>
 
-            <div class="interest-item">
-                <i class="fas fa-robot"></i>
-                <span>Robotique & Électronique</span>
-            </div>
+      <h3>Mon rôle</h3>
+      <p class="placeholder">
+        À compléter : ce que j'ai développé personnellement, les fonctionnalités dont j'étais responsable…
+      </p>
 
-        </div>
-    </section>
-	
-    <!-- Footer -->
-	<footer class="fixed-footer">
-		<div class="footer-content">
-			<a href="https://linkedin.com/in/timeojavaux" target="_blank">
-				<i class="fab fa-linkedin"></i><span>Linkedin</span>
-			</a>
-			<a href="https://github.com/timeojavaux" target="_blank">
-				<i class="fab fa-github"></i><span>GitHub</span>
-			</a>
-			<a href="mailto:timeo.javaux@iut-dijon.u-bourgogne.fr">
-				<i class="fas fa-envelope"></i><span>Mail</span>
-			</a>
-            <a href="./CV_Stage_Timéo_Javaux.pdf" target="_blank">
-				<i class="fa fa-file-text"></i><span>Mon CV</span>
-			</a>
-		</div>
-	</footer>
+      <h3>Difficultés et apprentissages</h3>
+      <p class="placeholder">
+        À compléter : un problème technique rencontré et comment je l'ai résolu, ce que j'en retiens…
+      </p>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1000, once: true });</script>
-	<script src="js/aura.js"></script>
-    <script src="js/nav_select.js"></script>
+      <h3>Résultat</h3>
+      <p class="placeholder">À compléter : note, livraison, retour du client ou des enseignants…</p>
 
-</body>
+      <h3>Liens</h3>
+      <p>
+        <a href="https://github.com/timeojavaux/SAE-Website-DEBUT" target="_blank" rel="noopener"
+          >Voir le code sur GitHub ↗</a
+        >
+      </p>
+      <p class="detail__note">Captures d'écran : cliquez sur l'image de la carte du projet.</p>
+    </template>
+    <template id="detail-ratatouille">
+      <h2 id="drawer-title">Jeu 2D « Ratatouille »</h2>
+      <p class="detail__meta">Semestre 2 · 2025 · projet d'équipe</p>
+      <p class="detail__lead">
+        Jeu rétro 2D en C#, développé à partir d'un framework et d'un cahier des charges : conception UML, programmation
+        orientée objet, tests unitaires et internationalisation.
+      </p>
+
+      <h3>Mon rôle</h3>
+      <p class="placeholder">
+        À compléter : ce que j'ai développé personnellement, les fonctionnalités dont j'étais responsable…
+      </p>
+
+      <h3>Difficultés et apprentissages</h3>
+      <p class="placeholder">
+        À compléter : un problème technique rencontré et comment je l'ai résolu, ce que j'en retiens…
+      </p>
+
+      <h3>Résultat</h3>
+      <p class="placeholder">À compléter : note, livraison, retour du client ou des enseignants…</p>
+
+      <h3>Liens</h3>
+      <p>
+        <a href="https://github.com/timeojavaux/SAE-Game-Ratatouille" target="_blank" rel="noopener"
+          >Voir le code sur GitHub ↗</a
+        >
+      </p>
+      <p class="detail__note">Captures d'écran : cliquez sur l'image de la carte du projet.</p>
+    </template>
+    <template id="detail-portfolio">
+      <h2 id="drawer-title">Ce portfolio</h2>
+      <p class="detail__meta">Depuis 2026 · projet personnel</p>
+      <p class="detail__lead">
+        Site statique conçu et développé en autonomie pour présenter mon parcours autrement qu'un CV.
+      </p>
+
+      <h3>Mon rôle</h3>
+      <p class="placeholder">
+        À compléter : ce que j'ai développé personnellement, les fonctionnalités dont j'étais responsable…
+      </p>
+
+      <h3>Difficultés et apprentissages</h3>
+      <p class="placeholder">
+        À compléter : un problème technique rencontré et comment je l'ai résolu, ce que j'en retiens…
+      </p>
+
+      <h3>Résultat</h3>
+      <p class="placeholder">À compléter : note, livraison, retour du client ou des enseignants…</p>
+
+      <h3>Liens</h3>
+      <p>
+        <a href="https://github.com/timeojavaux/timeojavaux.github.io" target="_blank" rel="noopener"
+          >Voir le code sur GitHub ↗</a
+        >
+      </p>
+    </template>
+  </body>
 </html>
