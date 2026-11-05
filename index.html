@@ -21,10 +21,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=Pixelify+Sans:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=VT323&display=swap"
     />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components.css" />
 
+    <script src="js/thermal.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
 
@@ -33,7 +36,7 @@
 
     <header class="site-header">
       <div class="container">
-        <a class="logo" href="#top">timeo.javaux</a>
+        <a class="logo" href="#top">timeo<span>.</span>javaux</a>
 
         <nav aria-label="Navigation principale">
           <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">menu</button>
@@ -57,13 +60,18 @@
     <main id="main">
       <!-- Accueil -->
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <canvas class="hero__sky" aria-hidden="true"></canvas>
         <div class="container">
+          <div class="screen hero__screen">
+            <canvas class="screen__heat" aria-hidden="true"></canvas>
+            <div class="screen__hud" aria-hidden="true">
+              <div><span>● REC · CAM-01</span><span>DIJON 47.32°N</span></div>
+              <div><span>BUT INFO · 3ᵉ ANNÉE</span><span>STAGE 15.03 → 02.07.2027</span></div>
+            </div>
+            <h1 class="hero__title" id="hero-title">Timéo<br />Javaux</h1>
+          </div>
           <p class="hero__status">
-            <span class="status-dot" aria-hidden="true"></span>Recherche un stage<br />
-            13 à 16 semaines · <span>15.03 → 02.07.2027</span>
+            <span class="status-dot" aria-hidden="true"></span>À la recherche d'un stage de 13 à 16 semaines, du 15.03 au 02.07.2027<span class="cursor" aria-hidden="true"></span>
           </p>
-          <h1 class="hero__title" id="hero-title">Timéo<br />Javaux</h1>
         </div>
       </section>
 
@@ -126,7 +134,7 @@
             </div>
             <div>
               <dt>lieu</dt>
-              <dd class="placeholder">Dijon / Pontarlier, France</dd>
+              <dd>Dijon / Pontarlier, France</dd>
             </div>
             <div class="wanted__wide">
               <dt>domaines</dt>
@@ -134,7 +142,7 @@
             </div>
             <div>
               <dt>permis</dt>
-              <dd class="placeholder">Permis B, non véhiculé</dd>
+              <dd>Permis B, non véhiculé</dd>
             </div>
           </dl>
         </div>
@@ -219,8 +227,9 @@
 
           <!-- Captures -->
           <div class="projects">
-            <article class="project">
-              <button class="project__media" type="button" data-project="antre2verres" data-seed="1"></button>
+            <article class="project project--current">
+              <span class="project__badge">● en cours</span>
+              <button class="project__media screen" type="button" data-project="antre2verres" data-seed="1"></button>
               <div class="project__body">
                 <span class="project__date">Depuis sept. 2026</span>
                 <h3>Antre2Verres (client/serveur)</h3>
@@ -235,6 +244,7 @@
                   <li class="tag">API</li>
                   <li class="tag">ASP.NET</li>
                   <li class="tag">Angular</li>
+                  <li class="tag">SignalR</li>
                   <li class="tag">MariaDB</li>
                   <li class="tag">Scrum</li>
                 </ul>
@@ -245,7 +255,7 @@
             </article>
 
             <article class="project">
-              <button class="project__media" type="button" data-project="audit-softs" data-seed="2"></button>
+              <button class="project__media screen" type="button" data-project="audit-softs" data-seed="2"></button>
               <div class="project__body">
                 <span class="project__date">Semestre 4 · 2026</span>
                 <h3>Audit et optimisation d'une application web</h3>
@@ -269,7 +279,7 @@
             </article>
 
             <article class="project">
-              <button class="project__media" type="button" data-project="de-but" data-seed="3"></button>
+              <button class="project__media screen" type="button" data-project="de-but" data-seed="3"></button>
               <div class="project__body">
                 <span class="project__date">Semestre 3 · 2025</span>
                 <h3>DE-BUT</h3>
@@ -298,7 +308,7 @@
             </article>
 
             <article class="project">
-              <button class="project__media" type="button" data-project="ratatouille" data-seed="4"></button>
+              <button class="project__media screen" type="button" data-project="ratatouille" data-seed="4"></button>
               <div class="project__body">
                 <span class="project__date">Semestre 2 · 2025</span>
                 <h3>Jeu 2D « Ratatouille »</h3>
@@ -326,13 +336,14 @@
             </article>
 
             <article class="project">
-              <div class="project__media" data-seed="5" aria-hidden="true"></div>
+              <div class="project__media screen" data-seed="5" aria-hidden="true"></div>
               <div class="project__body">
                 <span class="project__date">Depuis 2026</span>
                 <h3>Ce portfolio</h3>
                 <p>
-                  Site statique conçu et développé en autonomie pour présenter mon parcours autrement qu'un CV. Optimisé
-                  en continu : accessibilité, responsive design, version anglaise.
+                  Site statique conçu et développé en autonomie pour présenter mon parcours autrement qu'un CV, 
+                  en partie à l'aide de Claude. Optimisé en continu : accessibilité, responsive design, 
+                  version anglaise.
                 </p>
                 <ul class="tags">
                   <li class="tag">Portfolio</li>
@@ -359,6 +370,23 @@
               <p>Tous mes dépôts et mes contributions.</p>
               <span class="arrow" aria-hidden="true">→</span>
             </a>
+            <article class="project project--planned">
+              <div class="project__body">
+                <span class="project__date">Prochainement</span>
+                <h3>Serveur maison sur Raspberry Pi</h3>
+                <p>
+                  Projet personnel : monter mon propre petit serveur pour expérimenter différents projets, comme des
+                  bots, le stockage de mes photos ou l'hébergement de sites. Le but par la suite sera d'utiliser le
+                  serveur avec de l'électronique (Arduino) afin d'expérimenter la domotique.
+                </p>
+                <ul class="tags">
+                  <li class="tag">Raspberry Pi</li>
+                  <li class="tag">Auto-hébergement</li>
+                  <li class="tag">Bots</li>
+                  <li class="tag">Électronique</li>
+                </ul>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -392,6 +420,7 @@
                 <h4>Web</h4>
                 <ul class="tags">
                   <li class="tag">WordPress</li>
+                  <li class="tag">Angular</li>
                 </ul>
               </div>
               <div class="skills__row">
@@ -484,6 +513,40 @@
                   <li class="tag">Trello</li>
                   <li class="tag">Canva</li>
                 </ul>
+              </div>
+            </div>
+            <div class="skills__group">
+              <h3>IA &amp; assistants</h3>
+              <div class="skills__row">
+                <h4>Au quotidien</h4>
+                <ul class="tags">
+                  <li class="tag tag--ai">Claude (code)</li>
+                  <li class="tag">ChatGPT</li>
+                  <li class="tag">Gemini</li>
+                  <li class="tag">Copilot</li>
+                </ul>
+              </div>
+              <div class="skills__row">
+                <h4>Testés</h4>
+                <ul class="tags">
+                  <li class="tag">Humata</li>
+                  <li class="tag">DeepSeek</li>
+                </ul>
+              </div>
+              <div class="skills__row">
+                <h4>Usage</h4>
+                <p>
+                  Comprendre une erreur ou une documentation, accélérer l'écriture de code répétitif et de tests,
+                  reformuler des textes. Également afin de croiser les informations et vérifier la fiabilité des 
+                  sources / du résultat.
+                </p>
+              </div>
+              <div class="skills__row">
+                <h4>Bonnes pratiques</h4>
+                <p>
+                  Je relis et teste chaque proposition avant de l'intégrer, et je ne partage jamais de données
+                  sensibles (par exemple les données de santé pendant mon stage au CHU).
+                </p>
               </div>
             </div>
             <div class="skills__group">
@@ -603,7 +666,13 @@
                   <li class="tag">C#</li>
                   <li class="tag">Certification</li>
                 </ul>
-                <a class="more more--ghost" href="https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/" target="_blank" rel="noopener">Voir la formation ↗</a>
+                <a
+                  class="more more--ghost"
+                  href="https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/"
+                  target="_blank"
+                  rel="noopener"
+                  >Voir la formation ↗</a
+                >
               </div>
             </li>
             <li>
@@ -617,7 +686,9 @@
                   <li class="tag">OSINT</li>
                   <li class="tag">Cybersécurité</li>
                 </ul>
-                <a class="more more--ghost" href="https://mooc.osintfr.com/" target="_blank" rel="noopener">Voir la formation ↗</a>
+                <a class="more more--ghost" href="https://mooc.osintfr.com/" target="_blank" rel="noopener"
+                  >Voir la formation ↗</a
+                >
               </div>
             </li>
             <li>
@@ -631,7 +702,13 @@
                   <li class="tag">Cybersécurité</li>
                   <li class="tag">Formation</li>
                 </ul>
-                <a class="more more--ghost" href="https://openclassrooms.com/fr/courses/8028761-decouvrez-l-univers-de-la-cybersecurite" target="_blank" rel="noopener">Voir la formation ↗</a>
+                <a
+                  class="more more--ghost"
+                  href="https://openclassrooms.com/fr/courses/8028761-decouvrez-l-univers-de-la-cybersecurite"
+                  target="_blank"
+                  rel="noopener"
+                  >Voir la formation ↗</a
+                >
               </div>
             </li>
           </ol>
@@ -664,29 +741,31 @@
       <!-- Contact -->
       <section class="section contact" id="contact" aria-labelledby="contact-title">
         <div class="container">
-          <header class="section__head">
-            <span class="section__index">09</span>
-            <h2 class="section__title" id="contact-title">Contact</h2>
-          </header>
+          <div class="screen contact__panel">
+            <header class="section__head">
+              <span class="section__index">09</span>
+              <h2 class="section__title" id="contact-title">Contact</h2>
+            </header>
 
-          <p class="contact__lead">
-            Un stage de 13 à 16 semaines entre le 15 mars et le 2 juillet 2027 ? Écrivez-moi ou retrouvez-moi sur
-            LinkedIn.
-          </p>
-          <ul class="contact__links">
-            <li>
-              <a class="button" href="mailto:timeo.javaux@iut-dijon.u-bourgogne.fr">Mail</a>
-            </li>
-            <li>
-              <a class="button" href="https://linkedin.com/in/timeojavaux" target="_blank" rel="noopener">LinkedIn</a>
-            </li>
-            <li>
-              <a class="button" href="https://github.com/timeojavaux" target="_blank" rel="noopener">GitHub</a>
-            </li>
-            <li>
-              <a class="button" href="CV_Stage_Tim%C3%A9o_Javaux.pdf" target="_blank" rel="noopener">CV (PDF)</a>
-            </li>
-          </ul>
+            <p class="contact__lead">
+              Un stage de 13 à 16 semaines entre le 15 mars et le 2 juillet 2027 ? Écrivez-moi ou retrouvez-moi sur
+              LinkedIn.
+            </p>
+            <ul class="contact__links">
+              <li>
+                <a class="button" href="mailto:timeo.javaux@iut-dijon.u-bourgogne.fr">Mail</a>
+              </li>
+              <li>
+                <a class="button" href="https://linkedin.com/in/timeojavaux" target="_blank" rel="noopener">LinkedIn</a>
+              </li>
+              <li>
+                <a class="button" href="https://github.com/timeojavaux" target="_blank" rel="noopener">GitHub</a>
+              </li>
+              <li>
+                <a class="button" href="CV_Stage_Tim%C3%A9o_Javaux.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>

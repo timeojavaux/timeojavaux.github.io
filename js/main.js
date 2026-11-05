@@ -1,88 +1,14 @@
 "use strict";
 
-/* Rendu « bitmap » ------------------------------------------------------- */
-// Tramage ordonné (matrice de Bayer 4×4) sur deux couleurs.
-// Les couleurs sont lues dans le CSS (--accent et --paper) : changer --accent suffit.
-
-const BAYER = [
-  [0, 8, 2, 10],
-  [12, 4, 14, 6],
-  [3, 11, 1, 9],
-  [15, 7, 13, 5],
-];
-
-function cssColor(name) {
-  const value = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-  const ctx = document.createElement("canvas").getContext("2d");
-  ctx.fillStyle = value;
-  const hex = ctx.fillStyle; // le navigateur normalise en #rrggbb
-  return [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16));
-}
-
-// Générateur pseudo-aléatoire déterministe : même image à chaque chargement.
-function random(seed) {
-  let s = seed % 2147483647 || 1;
-  return () => (s = (s * 16807) % 2147483647) / 2147483647;
-}
-
-const gauss = (x, y, cx, cy, sx, sy) => Math.exp(-(((x - cx) / sx) ** 2 + ((y - cy) / sy) ** 2));
-
-// Champs de valeurs entre 0 et 1, en coordonnées normalisées.
-const fields = {
-  sky: (x, y) =>
-    gauss(x, y, 0.25, 0.35, 0.28, 0.12) +
-    gauss(x, y, 0.7, 0.6, 0.22, 0.1) * 0.9 +
-    gauss(x, y, 0.9, 0.2, 0.15, 0.08) * 0.7 +
-    y * 0.15,
-  waves: (x, y) => 0.5 + 0.5 * Math.sin(x * 9 + y * 3),
-  orb: (x, y) => Math.hypot(x - 0.5, (y - 0.5) * 0.5) * 2.2,
-  bands: (x, y) => x * 0.8 + (Math.floor(y * 6) % 2) * 0.2,
-  ridge: (x, y) => 1 - Math.abs(y - 0.5 - 0.25 * Math.sin(x * 7)) * 2.6,
-  dune: (x, y) => y * 1.1 - 0.25 + 0.2 * Math.sin(x * 5),
-};
-
-/**
- * Dessine un champ tramé dans un canvas.
- * @param {HTMLCanvasElement} canvas
- * @param {(x: number, y: number) => number} field
- * @param {object} options
- * @param {number} options.pixel  taille d'un pixel de trame à l'écran
- * @param {boolean} options.invert  inverse les deux couleurs
- * @param {number} options.streaks  nombre de traînées « glitch »
- * @param {number} options.seed
- */
-function dither(canvas, field, { pixel = 4, invert = false, streaks = 14, seed = 1 } = {}) {
-  const width = Math.max(1, Math.ceil(canvas.clientWidth / pixel));
-  const height = Math.max(1, Math.ceil(canvas.clientHeight / pixel));
-  canvas.width = width;
-  canvas.height = height;
-
-  const accent = cssColor("--accent");
-  const paper = cssColor("--paper");
-  const [low, high] = invert ? [paper, accent] : [accent, paper];
-
-  const ctx = canvas.getContext("2d");
-  const image = ctx.createImageData(width, height);
-
-  for (let y = 0; y < height; y++) {
-    for (let x = 0; x < width; x++) {
-      const value = Math.min(1, Math.max(0, field(x / width, y / height)));
-      const color = value > (BAYER[y % 4][x % 4] + 0.5) / 16 ? high : low;
-      const i = (y * width + x) * 4;
-      image.data.set([...color, 255], i);
-    }
-  }
-  ctx.putImageData(image, 0, 0);
-
-  const rand = random(seed);
-  for (let k = 0; k < streaks; k++) {
-    const y = Math.floor(rand() * height);
-    const x = Math.floor(rand() * width * 0.8);
-    const [r, g, b] = ctx.getImageData(x, y, 1, 1).data;
-    ctx.fillStyle = `rgb(${r} ${g} ${b})`;
-    ctx.fillRect(x, y, 6 + Math.floor(rand() * width * 0.3), 1 + Math.floor(rand() * 2));
-  }
-}
+/* ==========================================================================
+   Interactions du site
+   --------------------------------------------------------------------------
+   1. Écrans thermiques (accueil + vignettes)   → rendu dans js/thermal.js
+   2. Captures d'écran des projets + visionneuse
+   3. Panneau « En savoir plus »
+   4. Menu sur téléphone
+   5. Lien actif dans la navigation
+   ========================================================================== */
 
 const lang = document.documentElement.lang;
 const text = {
@@ -90,21 +16,15 @@ const text = {
   en: { soon: "screenshot coming soon", view: "View screenshots of", screenshot: "Screenshot" },
 }[lang] ?? {};
 
-/* Bandeau et vignettes tramés ------------------------------------------- */
+/* Écrans thermiques ------------------------------------------------------ */
+// Le rendu est dans js/thermal.js. L'accueil est animé, les vignettes sont fixes.
 
-const sky = document.querySelector(".hero__sky");
-const thumbs = [...document.querySelectorAll(".project__media")];
-const thumbFields = [fields.waves, fields.orb, fields.bands, fields.ridge, fields.dune];
-
-function paint() {
-  if (sky) dither(sky, fields.sky, { pixel: 4, seed: 11 });
-
-  thumbs.forEach((media, index) => {
-    const canvas = media.querySelector("canvas");
-    const seed = Number(media.dataset.seed) || index + 1;
-    dither(canvas, thumbFields[index % thumbFields.length], { pixel: 3, invert: true, seed: seed * 97 });
-  });
+const heroScreen = document.querySelector(".hero__screen");
+if (heroScreen) {
+  Thermal.create(heroScreen.querySelector(".screen__heat"), { animate: true, pointerArea: heroScreen });
 }
+
+const thumbs = [...document.querySelectorAll(".project__media")];
 
 /* Captures d'écran des projets ------------------------------------------ */
 
@@ -195,8 +115,13 @@ async function setupMedia(media) {
   media.addEventListener("click", () => openViewer(title, shots));
 }
 
-thumbs.forEach((media) => {
-  media.prepend(document.createElement("canvas"));
+thumbs.forEach((media, index) => {
+  const canvas = document.createElement("canvas");
+  canvas.className = "screen__heat";
+  canvas.setAttribute("aria-hidden", "true");
+  media.prepend(canvas);
+  Thermal.create(canvas, { seed: Number(media.dataset.seed) || index + 1 });
+
   if (media.dataset.project) setupMedia(media);
 });
 
@@ -207,13 +132,23 @@ viewer?.addEventListener("click", (event) => {
 
 /* Panneau « En savoir plus » --------------------------------------------- */
 // Chaque bouton [data-detail="x"] affiche le contenu du <template id="detail-x">.
+// Tant qu'une fiche contient encore un texte « À compléter » (.placeholder),
+// son bouton est masqué : il réapparaît tout seul une fois la fiche remplie.
 
 const drawer = document.querySelector(".drawer");
 const drawerContent = drawer?.querySelector(".drawer__content");
 
 document.querySelectorAll("[data-detail]").forEach((button) => {
   const template = document.getElementById(`detail-${button.dataset.detail}`);
-  if (!template) return;
+
+  if (!template || template.content.querySelector(".placeholder")) {
+    button.hidden = true;
+
+    // Si la carte n'a plus aucun bouton visible, on masque aussi leur conteneur
+    const actions = button.closest(".project__actions");
+    if (actions && !actions.querySelector(":scope > :not([hidden])")) actions.hidden = true;
+    return;
+  }
 
   button.addEventListener("click", () => {
     drawerContent.replaceChildren(template.content.cloneNode(true));
@@ -267,14 +202,4 @@ const observer = new IntersectionObserver(
 navLinks.forEach((link) => {
   const section = document.querySelector(link.getAttribute("href"));
   if (section) observer.observe(section);
-});
-
-/* Démarrage --------------------------------------------------------------- */
-
-paint();
-
-let resizeTimer;
-window.addEventListener("resize", () => {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(paint, 150);
 });

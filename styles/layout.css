@@ -1,0 +1,305 @@
+/* ==========================================================================
+   Mise en page : en-tête, accueil, introduction, sections, contact, pied
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   En-tête et navigation
+   -------------------------------------------------------------------------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--bg), transparent 8%);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 60px;
+}
+
+.logo {
+  font-family: var(--font-ui);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav-toggle {
+  display: none;
+  padding: 2px 12px;
+  border: var(--line);
+  border-radius: 8px;
+  background: transparent;
+  font-family: var(--font-ui);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-ui);
+  font-size: 1.3rem;
+}
+
+.nav-list a {
+  display: block;
+  padding: 0 8px;
+  border: 1.5px solid transparent;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.nav-list a:hover,
+.nav-list a[aria-current="true"] {
+  background: var(--accent);
+  color: #fff;
+}
+
+.nav-list .nav-contact {
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.nav-list .nav-lang {
+  border-color: var(--ink);
+}
+
+/* --------------------------------------------------------------------------
+   Accueil : l'écran thermique
+   -------------------------------------------------------------------------- */
+
+.hero {
+  padding-top: 20px;
+}
+
+.hero__screen {
+  height: clamp(340px, 58vh, 480px);
+}
+
+.hero__title {
+  --scan-color: var(--screen-text);
+  position: absolute;
+  z-index: 2;
+  left: 30px;
+  bottom: 52px;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(4rem, 13vw, 10rem);
+  line-height: 0.86;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.hero__status {
+  margin-top: 16px;
+  font-family: var(--font-ui);
+  font-size: 1.6rem;
+  line-height: 1.2;
+  color: var(--accent-text);
+}
+
+/* --------------------------------------------------------------------------
+   Introduction
+   -------------------------------------------------------------------------- */
+
+.intro .container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  padding-block: 32px 40px;
+}
+
+.intro__lead {
+  font-size: clamp(1.25rem, 2.3vw, 1.5rem);
+  line-height: 1.32;
+}
+
+.intro__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.facts {
+  align-self: end;
+  font-size: 0.9rem;
+}
+
+.facts div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 4px 0;
+  border-bottom: 1px dashed var(--rule);
+}
+
+.facts dt {
+  font-family: var(--font-ui);
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: var(--accent-text);
+}
+
+.facts dd {
+  text-align: right;
+  align-self: center;
+}
+
+/* --------------------------------------------------------------------------
+   Sections
+   -------------------------------------------------------------------------- */
+
+.section {
+  padding-block: 56px;
+  border-top: 1px solid var(--rule);
+}
+
+.section__head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.section__index {
+  font-family: var(--font-ui);
+  font-size: 1.4rem;
+  color: var(--accent-text);
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.section__note {
+  margin: -14px 0 24px;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+/* --------------------------------------------------------------------------
+   Contact : un second écran, sombre
+   -------------------------------------------------------------------------- */
+
+.contact__panel {
+  padding: 40px clamp(20px, 4vw, 44px) 44px;
+  color: var(--screen-text);
+}
+
+.contact .section__index {
+  color: var(--screen-text);
+}
+
+.contact .section__title {
+  --scan-color: var(--screen-text);
+}
+
+.contact__lead {
+  max-width: 52ch;
+  margin-bottom: 26px;
+  font-size: 1.2rem;
+}
+
+.contact__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   Pied de page
+   -------------------------------------------------------------------------- */
+
+.site-footer {
+  padding-block: 20px 28px;
+  font-family: var(--font-ui);
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   Téléphones
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px var(--gutter) 14px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .nav-list.is-open {
+    display: flex;
+  }
+
+  .nav-list a {
+    padding: 8px 10px;
+  }
+
+  .hero__screen {
+    height: 320px;
+  }
+
+  .hero__title {
+    left: 18px;
+    bottom: 22px;
+  }
+
+  /* Sur petit écran, seuls les repères du haut restent affichés */
+  .hero .screen__hud {
+    font-size: 1rem;
+  }
+
+  .hero .screen__hud div:last-child {
+    display: none;
+  }
+
+  .hero__status {
+    font-size: 1.3rem;
+  }
+
+  .intro .container {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .section {
+    padding-block: 40px;
+  }
+}
