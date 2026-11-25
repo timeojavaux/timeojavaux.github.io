@@ -587,6 +587,58 @@ button.project__media:enabled {
 }
 
 /* --------------------------------------------------------------------------
+   Bouton « retour en haut »
+   -------------------------------------------------------------------------- */
+
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--accent);
+  color: #fff;
+  box-shadow:
+    0 0 0 4px color-mix(in srgb, var(--accent), transparent 82%),
+    0 6px 18px rgb(0 0 0 / 0.18);
+  transition:
+    opacity 0.2s,
+    visibility 0.2s,
+    transform 0.2s,
+    background 0.15s;
+}
+
+.to-top svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.to-top:hover {
+  background: var(--ink);
+}
+
+/* Masqué tant que l'accueil est visible (classe posée par js/main.js) */
+.to-top.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+}
+
+@media (max-width: 720px) {
+  .to-top {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+/* --------------------------------------------------------------------------
    Visionneuse de captures
    -------------------------------------------------------------------------- */
 

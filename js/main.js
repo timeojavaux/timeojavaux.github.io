@@ -8,6 +8,7 @@
    3. Panneau « En savoir plus »
    4. Menu sur téléphone
    5. Lien actif dans la navigation
+   6. Bouton « retour en haut »
    ========================================================================== */
 
 const lang = document.documentElement.lang;
@@ -203,3 +204,15 @@ navLinks.forEach((link) => {
   const section = document.querySelector(link.getAttribute("href"));
   if (section) observer.observe(section);
 });
+
+/* Bouton « retour en haut » ---------------------------------------------- */
+// Masqué tant que l'écran d'accueil est visible, affiché dès qu'on l'a dépassé.
+
+const toTop = document.querySelector(".to-top");
+const hero = document.querySelector(".hero");
+
+if (toTop && hero) {
+  new IntersectionObserver(([entry]) => {
+    toTop.classList.toggle("is-hidden", entry.isIntersecting);
+  }).observe(hero);
+}
